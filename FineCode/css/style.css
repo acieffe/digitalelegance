@@ -1,0 +1,37 @@
+nav {
+  box-sizing: content-box;
+}
+
+#header-logo {
+  padding-left: .5em;
+}
+
+.full-height {
+  height: 100vh;
+}
+
+.full-width {
+  width: 100vw;
+}
+
+@media only screen and (max-width: 530px) {
+  #header-logo {
+    padding-left: 0px !important;
+    font-size: x-large;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  #header-logo {
+    font-size: large;
+  }
+}
+
+.gold {
+  background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+  border: #d0b64f 3px groove;
+}
+
+.gold-text {
+  color: #D0B64F;
+}
