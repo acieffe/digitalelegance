@@ -1,2 +1,2 @@
 # My Personal Projects
-This sections houses my personally built projects
+This sections houses links to my personally built projects
