@@ -1,0 +1,31 @@
+<!--?xml version="1.0" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" width="300.000000pt" height="300.000000pt" viewBox="0 0 300.000000 300.000000" preserveAspectRatio="xMidYMid meet">
+<metadata>
+  <rdf:rdf xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <rdf:description dc:title="corner square type art" dc:publisher="Hiox" dc:date="2015-05-12" dc:format="image/svg+xml" dc:language="en">
+      <dc:creator>
+        <rdf:bag>
+          <rdf:li>svgimages.com</rdf:li>
+        </rdf:bag>
+      </dc:creator>
+    </rdf:description>
+  </rdf:rdf>
+</metadata>
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="#d0b64f" stroke="none">
+<path d="M0 2725 l0 -275 263 0 c191 0 266 3 275 12 9 9 12 84 12 275 l0 263
+-275 0 -275 0 0 -275z m420 3 l0 -153 -150 3 -150 3 0 150 0 149 150 0 150 0
+0 -152z" id="node1" class="node" style="position: relative;"></path>
+<path d="M640 2680 l0 -320 -320 0 -320 0 0 -1180 0 -1180 60 0 60 0 0 640 0
+640 100 0 100 0 0 -375 0 -375 220 0 220 0 0 60 0 59 -157 3 -158 3 -3 313 -2
+312 160 0 160 0 0 380 0 380 -220 0 -220 0 0 -220 0 -220 60 0 60 0 0 160 0
+160 100 0 100 0 0 -260 0 -260 -260 0 -260 0 0 420 0 420 320 0 320 0 0 320 0
+320 420 0 420 0 0 -100 0 -100 -320 0 -320 0 0 -220 0 -220 380 0 380 0 0 160
+0 160 313 -2 312 -3 3 -157 3 -158 59 0 60 0 0 220 0 220 -375 0 -375 0 0 100
+0 100 640 0 640 0 0 60 0 60 -1180 0 -1180 0 0 -320z m960 -220 l0 -100 -260
+0 -260 0 0 100 0 100 260 0 260 0 0 -100z" id="node2" class="node" style="position: relative;"></path>
+<path d="M960 1765 l0 -275 273 2 272 3 3 273 2 272 -275 0 -275 0 0 -275z
+m425 0 l0 -150 -150 0 -150 0 -3 153 -3 153 153 -3 153 -3 0 -150z" id="node3" class="node" style="position: relative;"></path>
+</g>
+<g transform="translate(0.000000,300.000000) scale(0.100000,-0.100000)" fill="none" stroke="none">
+
+</g>
+</svg>
