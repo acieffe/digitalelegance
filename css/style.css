@@ -9,7 +9,6 @@ body {
 }
 
 .holder {
-	background-color: aquamarine;
 	width: 100vw;
 	height: 100vh;
 	display: block;
@@ -82,39 +81,39 @@ a:hover {
 }
 
 .cornerHolder img {
+	position: fixed;
 	z-index: 80;
-	width: 10%;
-	transition: width 1s;
+	width: 8%;
 }
 
 .nwCorner img {
-	position: fixed;
 	top: 5px;
 	left: 5px;
+	transition: width 1s;
 }
 
 .neCorner img {
 	transform: rotate(90deg);
-	position: fixed;
 	top: 5px;
 	right: 5px;
 	transition: transform 1s;
+	transition: width 1s;
 }
 
 .seCorner img {
 	transform: rotate(180deg);
-	position: fixed;
 	bottom: 5px;
 	right: 5px;
 	transition: transform 1s;
+	transition: width 1s;
 }
 
 .swCorner img {
 	transform: rotate(270deg);
-	position: fixed;
 	bottom: 5px;
 	left: 5px;
 	transition: transform 1s;
+	transition: width 1s;
 }
 
 @media only screen and (orientation: portrait) {
@@ -132,15 +131,22 @@ a:hover {
 	a {
 		font-size: 4rem;
 	}
-	.cornerHolder img {
-		width: 20%;
-	}
+
 }
 
 @media only screen and (max-height: 500px) and (orientation: landscape) {
 	a {
 		font-size: 4rem;
 	}
+}
+
+@media only screen and (max-width: 800px) and (orientation: portrait) {
+	.cornerHolder img {
+		width: 20%;
+	}
+}
+
+@media only screen and (max-height: 800px) and (orientation: landscape) {
 	.cornerHolder img {
 		width: 20%;
 	}

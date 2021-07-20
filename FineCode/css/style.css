@@ -1,10 +1,50 @@
-nav {
-  box-sizing: content-box;
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+
+body {
+  background: #222;
 }
 
-#header-logo {
-  padding-left: .5em;
+.navbar {
+    font-family: 'Italianno', cursive;
+    padding-top: 0;
+    padding-bottom: 0;
 }
+
+.nav-item a {
+  font-size: 2em;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #222;
+}
+
+.navbar-dark .navbar-nav .nav-link:active {
+  color: #222;
+}
+
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.55);
+    border: #d0b64f 3px groove;
+}
+
+.header-logo {
+  font-size: 3em;
+  text-decoration: none;
+}
+
+.header-logo:hover {
+    color: #D0B64F;
+  }
+
+.neg-pad {
+  margin-left: -1rem;
+}
+
+.nav-item:hover {
+  background: rgba(34, 34, 34, .3);
+  transition: background 1s;
+}
+
 
 .full-height {
   height: 100vh;
@@ -14,24 +54,42 @@ nav {
   width: 100vw;
 }
 
-@media only screen and (max-width: 530px) {
-  #header-logo {
-    padding-left: 0px !important;
-    font-size: x-large;
+@media only screen and (min-width: 1024px) {
+  .nav-item {
+    font-size: 1.25em;
   }
 }
 
-@media only screen and (max-width: 370px) {
-  #header-logo {
-    font-size: large;
+@media only screen and (max-width: 900px) {
+  .header-logo {
+    font-size: 2em;
   }
 }
 
-.gold {
+@media only screen and (max-width: 450px) {
+  .header-logo {
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .header-logo {
+    font-size: 1em;
+  }
+}
+
+.bg-gold {
   background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
-  border: #d0b64f 3px groove;
 }
 
-.gold-text {
+.border-gold {
+    border: #d0b64f 3px groove;
+}
+
+.text-gold {
   color: #D0B64F;
+}
+
+.text-black {
+  color: #222;
 }
