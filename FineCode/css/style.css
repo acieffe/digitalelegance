@@ -1,95 +1,180 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 body {
-  background: #222;
+	background: url(/FineCode/img/kitsugi.gif);
+	background-size: cover;
+}
+
+main > .container {
+	padding: 60px 15px 0;
+}
+
+main {
+	background-color: rgba(34, 34, 34, 0.5);
 }
 
 .navbar {
-    font-family: 'Italianno', cursive;
-    padding-top: 0;
-    padding-bottom: 0;
+	font-family: 'Italianno', cursive;
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
 .nav-item a {
-  font-size: 2em;
+	font-size: 2em;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-  color: #222;
+	color: #222;
 }
 
 .navbar-dark .navbar-nav .nav-link:active {
-  color: #222;
+	color: #222;
 }
 
 .navbar-dark .navbar-toggler {
-    color: rgba(255,255,255,.55);
-    border: #d0b64f 3px groove;
+	color: rgba(255, 255, 255, 0.55);
+	border: #d0b64f 3px groove;
 }
 
 .header-logo {
-  font-size: 3em;
-  text-decoration: none;
+	font-size: 3em;
+	text-decoration: none;
 }
 
 .header-logo:hover {
-    color: #D0B64F;
-  }
+	color: #d0b64f;
+}
 
 .neg-pad {
-  margin-left: -1rem;
+	margin-left: -1rem;
 }
 
 .nav-item:hover {
-  background: rgba(34, 34, 34, .3);
-  transition: background 1s;
+	border-radius: 15px;
+	background: rgba(34, 34, 34, 0.3);
+	transition: background 1s;
 }
 
-
 .full-height {
-  height: 100vh;
+	height: 100vh;
 }
 
 .full-width {
-  width: 100vw;
+	width: 100vw;
 }
 
-@media only screen and (min-width: 1024px) {
-  .nav-item {
-    font-size: 1.25em;
-  }
+.hero {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-@media only screen and (max-width: 900px) {
-  .header-logo {
-    font-size: 2em;
-  }
+.hero::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: url(/FineCode/img/sales.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	filter: brightness(40%);
+}
+
+.hero-content {
+	position: relative;
+}
+
+.hero-content {
+	position: relative;
+	font-family: 'Raleway', sans-serif;
+	text-align: center;
+}
+
+.hero-title {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+.hero-subtitle {
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+.list-group-item-hover:hover {
+	background-color: rgba(208, 182, 79, .2);
+	cursor: pointer;
+}
+
+footer p {
+	margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+	.header-logo {
+		font-size: 2em;
+	}
 }
 
 @media only screen and (max-width: 450px) {
-  .header-logo {
-    font-size: 1.5em;
-  }
+	.header-logo {
+		font-size: 1.5em;
+	}
 }
 
 @media only screen and (max-width: 340px) {
-  .header-logo {
-    font-size: 1em;
-  }
+	.header-logo {
+		font-size: 1em;
+	}
 }
 
 .bg-gold {
-  background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+	background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
 }
 
 .border-gold {
-    border: #d0b64f 3px groove;
+	border: #d0b64f 3px groove;
 }
 
 .text-gold {
-  color: #D0B64F;
+	color: #d0b64f;
+}
+
+.link-gold-hover:hover {
+	text-decoration: none;
+	color: #d0b64f;
+}
+
+.link-light {
+	text-decoration: none;
 }
 
 .text-black {
-  color: #222;
+	color: #222;
+}
+
+.bg-black {
+	background-color: rgba(34, 34, 34, 1);
+}
+
+.bg-black-2 {
+	background-color: rgba(34, 34, 34, 0.2);
+}
+
+.bg-black-4 {
+	background-color: rgba(34, 34, 34, 0.4);
+}
+
+.bg-black-6 {
+	background-color: rgba(34, 34, 34, 0.6);
+}
+
+.bg-black-8 {
+	background-color: rgba(34, 34, 34, 0.8);
 }
