@@ -64,7 +64,7 @@
 
 						<!-- Link - About -->
 						<li class="nav-item">
-							<a class="nav-link" href="#"
+							<a class="nav-link" href="#about"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -114,7 +114,7 @@
 						</li>
 						<!-- Link - Blog  -->
 						<li class="nav-item">
-							<a class="nav-link" href="#"
+							<a class="nav-link" href="#blog"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="me-1 mb-2 text-gold"
@@ -137,7 +137,7 @@
 
 						<!-- Link - Contact -->
 						<li class="nav-item">
-							<a class="nav-link" href="#"
+							<a class="nav-link" href="#contact"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="me-1 mb-2 text-gold"
@@ -168,12 +168,14 @@
 					<a href="about" class="btn btn-warning">Get To Know Me</a>
 				</div>
 			</section>
-			<div class="container bg-black text-light">
+
+			<!-- Showcase -->
+			<div class="container bg-black-8 text-light">
 				<!-- About Me -->
-				<div class="row"></div>
+				<div class="row" id="#about"></div>
 
 				<!-- Projects -->
-				<div class="row row-cols-1 row-cols-md-3 gy-1">
+				<div class="row row-cols-1 row-cols-md-3 gy-1" id="projects">
 					<!-- Personal Projects -->
 					<div class="col col-md-4">
 						<div class="card bg-black-8 border-gold">
@@ -314,10 +316,49 @@
 				</div>
 
 				<!-- Blog -->
-				<div class="row"></div>
+				<div class="row" id="blog"></div>
 
 				<!-- Contact Me -->
-				<div class="row"></div>
+				<div class="row justify-content-md-center" id="contact">
+					<div class="col-lg-6">
+						<div class="container my-4">
+							<h1 class="text-center text-light">Contact Me</h1>
+							<div class="bg-black text-light border-gold shadow-lg p-2">
+								<form action="Post">
+									<div class="row">
+										<div class="col-6">
+											<label class="form-label" for="fname">First Name</label>
+											<input type="text" class="form-control" placeholder="First Name" name="fname" />
+										</div>
+										<div class="col-6">
+											<label class="form-label" for="lname">Last Name</label>
+											<input type="text" class="form-control" placeholder="Last Name" name="lname" />
+										</div>
+										<div class="col-6">
+											<label class="form-label" for="email">Email</label>
+											<input type="email" class="form-control" placeholder="Email" name="email" />
+										</div>
+										<div class="col-6">
+											<label class="form-label" for="phone">Phone (optional)</label>
+											<input type="tel" class="form-control" placeholder="Phone" name="phone" />
+										</div>
+										<div class="col-12">
+											<label class="form-label" for="subject">Subject</label>
+											<input type="text" class="form-control" placeholder="Subject" name="subject" required />
+										</div>
+										<div class class="col-12">
+											<label class="form-label" for="message">Message</label>
+											<textarea name="message" class="form-control" placeholder="Message" required></textarea>
+										</div>
+										<div class="p-2 text-light text-center">
+											<button class="btn btn-warning" type="submit">Submit</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<footer class="full-width bg-black border-gold text-gold p-2">

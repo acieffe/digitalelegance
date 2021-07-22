@@ -4,6 +4,7 @@
 body {
 	background: url(../img/kitsugi.gif);
 	background-size: cover;
+	background-attachment: fixed;
 }
 
 main > .container {
