@@ -113,7 +113,24 @@ main {
 	cursor: pointer;
 }
 
-footer p {
+.no-bullet {
+	list-style-type: none;
+}
+
+.footer-list {
+	line-height: 1;
+	font-size: smaller;
+}
+
+.footer-list a {
+	text-decoration: none;
+}
+
+.footer-list a:hover {
+	color: #F8F9FA;
+}
+
+.footer-p {
 	margin-bottom: 0;
 }
 
