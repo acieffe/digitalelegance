@@ -7,12 +7,27 @@ body {
 	background-attachment: fixed;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
 main > .container {
 	padding: 60px 15px 0;
 }
 
 main {
-	background-color: rgba(34, 34, 34, 0.5);
+	font-family: 'Raleway', sans-serif;
+}
+
+a {
+	text-decoration: none;
 }
 
 .navbar {
@@ -47,10 +62,6 @@ main {
 	color: #d0b64f;
 }
 
-.neg-pad {
-	margin-left: -1rem;
-}
-
 .nav-item:hover {
 	border-radius: 15px;
 	background: rgba(34, 34, 34, 0.3);
@@ -79,8 +90,8 @@ main {
 	position: absolute;
 	top: 0;
 	left: 0;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 	background: url(../img/sales.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -94,7 +105,6 @@ main {
 
 .hero-content {
 	position: relative;
-	font-family: 'Raleway', sans-serif;
 	text-align: center;
 }
 
@@ -108,6 +118,10 @@ main {
 	font-weight: 200;
 }
 
+.thick {
+	font-weight: 600;
+}
+
 .list-group-item-hover:hover {
 	background-color: rgba(208, 182, 79, 0.2);
 	cursor: pointer;
@@ -118,12 +132,13 @@ main {
 }
 
 .footer-list {
+	padding: 0;
 	line-height: 1;
 	font-size: smaller;
 }
 
-.footer-list a {
-	text-decoration: none;
+.footer-list li {
+	padding-top: 4px;
 }
 
 .footer-list a:hover {
@@ -164,14 +179,14 @@ main {
 	color: #d0b64f;
 }
 
-.link-gold-hover:hover {
-	text-decoration: none;
+.link-gold {
 	color: #d0b64f;
 }
 
-.link-light {
-	text-decoration: none;
+.link-gold-hover:hover {
+	color: #222;
 }
+
 
 .text-black {
 	color: #222;

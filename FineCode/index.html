@@ -64,7 +64,7 @@
 
 						<!-- Link - About -->
 						<li class="nav-item">
-							<a class="nav-link" href="#about"
+							<a class="nav-link" href="#aboutMe"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -75,8 +75,7 @@
 								>
 									<path
 										d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"
-									/>
-								</svg>
+									/></svg
 								>About</a
 							>
 						</li>
@@ -107,11 +106,12 @@
 
 							<!-- Dropdown in Portfolio -->
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" href="#">Personal Projects</a></li>
-								<li><a class="dropdown-item" href="#">Bootcamp Projects</a></li>
-								<li><a class="dropdown-item" href="#">School Projects</a></li>
+								<li><a class="dropdown-item" href="#projects">Personal Projects</a></li>
+								<li><a class="dropdown-item" href="#projects">Bootcamp Projects</a></li>
+								<li><a class="dropdown-item" href="#projects">School Projects</a></li>
 							</ul>
 						</li>
+
 						<!-- Link - Blog  -->
 						<li class="nav-item">
 							<a class="nav-link" href="#blog"
@@ -165,151 +165,187 @@
 
 					<h2 class="hero-subtitle text-light mt-3">This Luxurious Fine Code Is... Digital Elegance</h2>
 
-					<a href="about" class="btn btn-warning">Get To Know Me</a>
+					<a href="#aboutMe" class="btn btn-warning">Get To Know Me</a>
 				</div>
 			</section>
 
 			<!-- Showcase -->
-			<div class="container bg-black-8 text-light">
+			<div class="bg-black-8 text-light">
+
 				<!-- About Me -->
-				<div class="row" id="#about"></div>
+				<div class="bg-light text-black pb-4">
+					<div class="container pb-4">
+						<h1 class="thick" id="aboutMe">&nbsp;</h1>
+						<h1 class="thick pt-4">About Me</h1>
+						<h6>Get to know me</h6>
+						<div class="row justify-content-center">
+							<div class="col-md-4 text-center">
+						<img src="..." alt="Ace" />
+							</div>
+						</div>
+						<h5 class="text-gold thick">Who am i?</h5>
+						<h3 class="thick">I'm Ace Baugh, a FullStack Developer</h3>
+						<div class="row">
+							<div class="col">
+								<p></p>
+							</div>
+						</div>
+						<hr />
+						<div class="row">
+							<div class="col-md-6">
+								<p><span class="thick">Name: </span>&nbsp;&nbsp;Ace Baugh</p>
+								<p><span class="thick">From: </span>&nbsp;&nbsp; Orlando, Florida</p>
+							</div>
+							<div class="col-md-6">
+								<p>
+									<span class="thick">Email: &nbsp;&nbsp;</span
+									><a href="mailto:ace.d.baugh@digitalelegance.com" class="link-gold link-gold-hover">ace.d.baugh@digitalelegance.com</a>
+								</p>
+							</div>
+						</div>
+						<a href="files/resume.pdf" class="btn btn-warning shadow-sm">Download CV/Resume</a>
+						<a href="#projects" class="btn btn-light border-warning border-2 shadow-sm">My Work</a>
+					</div>
+				</div>
 
 				<!-- Projects -->
-				<div class="row row-cols-1 row-cols-md-3 gy-1" id="projects">
-					<!-- Personal Projects -->
-					<div class="col col-md-4">
-						<div class="card bg-black-8 border-gold">
-							<div class="card-header">
-								<h2 class="text-center">Personal Projects</h2>
-							</div>
-							<div id="carouselControls01" class="carousel slide" data-bs-ride="carousel">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<a href="http://digitalelegance.com"><img src="..." class="d-block w-100" alt="This Website" /></a>
-									</div>
-									<div class="carousel-item">
-										<a href=""><img src="..." class="d-block w-100" alt="Flight of Passage" /></a>
-									</div>
-									<div class="carousel-item">
-										<a href=""><img src="..." class="d-block w-100" alt="WDW ShiftX" /></a>
-									</div>
+				<div class="container mt-4" id="projects">
+					<div class="row row-cols-1 row-cols-md-3 gy-1">
+						<!-- Personal Projects -->
+						<div class="col col-md-4">
+							<div class="card bg-black-8 border-gold">
+								<div class="card-header">
+									<h2 class="text-center">Personal Projects</h2>
 								</div>
-								<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls01" data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Previous</span>
-								</button>
-								<button class="carousel-control-next" type="button" data-bs-target="#carouselControls01" data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Next</span>
-								</button>
-							</div>
-							<div class="card-body">
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">This Website</a>
-									</li>
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">Flight of Passage</a>
-									</li>
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">WDW ShiftX</a>
-									</li>
-								</ul>
-							</div>
-							<div class="card-body text-center">
-								<a href="#" class="btn btn-warning">See More Personal Projects</a>
+								<div id="carouselControls01" class="carousel slide" data-bs-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<a href="http://digitalelegance.com"><img src="..." class="d-block w-100" alt="This Website" /></a>
+										</div>
+										<div class="carousel-item">
+											<a href=""><img src="..." class="d-block w-100" alt="Flight of Passage" /></a>
+										</div>
+										<div class="carousel-item">
+											<a href=""><img src="..." class="d-block w-100" alt="WDW ShiftX" /></a>
+										</div>
+									</div>
+									<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls01" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button" data-bs-target="#carouselControls01" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
+								</div>
+								<div class="card-body">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">This Website</a>
+										</li>
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">Flight of Passage</a>
+										</li>
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">WDW ShiftX</a>
+										</li>
+									</ul>
+								</div>
+								<div class="card-body text-center">
+									<a href="#" class="btn btn-warning">See More Personal Projects</a>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<!-- Bootcamp Projects -->
-					<div class="col col-md-4">
-						<div class="card bg-black-8 border-gold">
-							<div class="card-header">
-								<h2 class="text-center">Bootcamp Projects</h2>
-							</div>
-							<div id="carouselControls02" class="carousel slide" data-bs-ride="carousel">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<a href="http://digitalelegance.com"><img src="..." class="d-block w-100" alt="This Website" /></a>
-									</div>
-									<div class="carousel-item">
-										<a href=""><img src="..." class="d-block w-100" alt="Flight of Passage" /></a>
-									</div>
-									<div class="carousel-item">
-										<a href=""><img src="..." class="d-block w-100" alt="WDW ShiftX" /></a>
-									</div>
+						<!-- Bootcamp Projects -->
+						<div class="col col-md-4">
+							<div class="card bg-black-8 border-gold">
+								<div class="card-header">
+									<h2 class="text-center">Bootcamp Projects</h2>
 								</div>
-								<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls02" data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Previous</span>
-								</button>
-								<button class="carousel-control-next" type="button" data-bs-target="#carouselControls02" data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Next</span>
-								</button>
-							</div>
-							<div class="card-body">
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">This Website</a>
-									</li>
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">Flight of Passage</a>
-									</li>
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">WDW ShiftX</a>
-									</li>
-								</ul>
-							</div>
-							<div class="card-body text-center">
-								<a href="#" class="btn btn-warning">See More Bootcamp Projects</a>
+								<div id="carouselControls02" class="carousel slide" data-bs-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<a href="http://digitalelegance.com"><img src="..." class="d-block w-100" alt="This Website" /></a>
+										</div>
+										<div class="carousel-item">
+											<a href=""><img src="..." class="d-block w-100" alt="Flight of Passage" /></a>
+										</div>
+										<div class="carousel-item">
+											<a href=""><img src="..." class="d-block w-100" alt="WDW ShiftX" /></a>
+										</div>
+									</div>
+									<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls02" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button" data-bs-target="#carouselControls02" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
+								</div>
+								<div class="card-body">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">This Website</a>
+										</li>
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">Flight of Passage</a>
+										</li>
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">WDW ShiftX</a>
+										</li>
+									</ul>
+								</div>
+								<div class="card-body text-center">
+									<a href="#" class="btn btn-warning">See More Bootcamp Projects</a>
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<!-- School Projects -->
-					<div class="col col-md-4">
-						<div class="card bg-black-8 border-gold">
-							<div class="card-header">
-								<h2 class="text-center">School Projects</h2>
-							</div>
-							<div id="carouselControls03" class="carousel slide" data-bs-ride="carousel">
-								<div class="carousel-inner">
-									<div class="carousel-item active">
-										<a href="http://digitalelegance.com"><img src="img/dice.jpg" class="d-block w-100" alt="Dice Game" /></a>
-									</div>
-									<div class="carousel-item">
-										<a href=""><img src="..." class="d-block w-100" alt="Flight of Passage" /></a>
-									</div>
-									<div class="carousel-item">
-										<a href=""><img src="..." class="d-block w-100" alt="WDW ShiftX" /></a>
-									</div>
+						<!-- School Projects -->
+						<div class="col col-md-4">
+							<div class="card bg-black-8 border-gold">
+								<div class="card-header">
+									<h2 class="text-center">School Projects</h2>
 								</div>
-								<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls03" data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Previous</span>
-								</button>
-								<button class="carousel-control-next" type="button" data-bs-target="#carouselControls03" data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Next</span>
-								</button>
-							</div>
-							<div class="card-body">
-								<ul class="list-group list-group-flush">
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">Dice Game</a>
-									</li>
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">Flight of Passage</a>
-									</li>
-									<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
-										<a href="#" class="text-light link-light link-gold-hover">WDW ShiftX</a>
-									</li>
-								</ul>
-							</div>
-							<div class="card-body text-center">
-								<a href="#" class="btn btn-warning">See More School Projects</a>
+								<div id="carouselControls03" class="carousel slide" data-bs-ride="carousel">
+									<div class="carousel-inner">
+										<div class="carousel-item active">
+											<a href="http://digitalelegance.com"><img src="img/dice.jpg" class="d-block w-100" alt="Dice Game" /></a>
+										</div>
+										<div class="carousel-item">
+											<a href=""><img src="..." class="d-block w-100" alt="Flight of Passage" /></a>
+										</div>
+										<div class="carousel-item">
+											<a href=""><img src="..." class="d-block w-100" alt="WDW ShiftX" /></a>
+										</div>
+									</div>
+									<button class="carousel-control-prev" type="button" data-bs-target="#carouselControls03" data-bs-slide="prev">
+										<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Previous</span>
+									</button>
+									<button class="carousel-control-next" type="button" data-bs-target="#carouselControls03" data-bs-slide="next">
+										<span class="carousel-control-next-icon" aria-hidden="true"></span>
+										<span class="visually-hidden">Next</span>
+									</button>
+								</div>
+								<div class="card-body">
+									<ul class="list-group list-group-flush">
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">Dice Game</a>
+										</li>
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">Flight of Passage</a>
+										</li>
+										<li class="list-group-item bg-black text-light border border-warning list-group-item-hover">
+											<a href="#" class="text-light">WDW ShiftX</a>
+										</li>
+									</ul>
+								</div>
+								<div class="card-body text-center">
+									<a href="#" class="btn btn-warning">See More School Projects</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -319,80 +355,84 @@
 				<div class="row" id="blog"></div>
 
 				<!-- Contact Me -->
-				<div class="row justify-content-md-center" id="contact">
-					<div class="col-lg-6">
-						<div class="container my-4">
-							<h1 class="text-center text-light">Contact Me</h1>
-							<div class="bg-black text-light border-gold shadow-lg p-2">
-								<form action="Post">
-									<div class="row">
-										<div class="col-6">
-											<label class="form-label" for="fname">First Name</label>
-											<input type="text" class="form-control" placeholder="First Name" name="fname" />
+				<div class="container" id="contact">
+					<div class="row justify-content-md-center">
+						<div class="col-lg-6">
+							<div class="container my-4">
+								<h1 class="text-center text-light">Contact Me</h1>
+								<div class="bg-black text-light border-gold shadow-lg p-2">
+									<form action="Post">
+										<div class="row">
+											<div class="col-md-6">
+												<label class="form-label" for="fname">First Name</label>
+												<input type="text" class="form-control" placeholder="First Name" name="fname" />
+											</div>
+											<div class="col-md-6">
+												<label class="form-label" for="lname">Last Name</label>
+												<input type="text" class="form-control" placeholder="Last Name" name="lname" />
+											</div>
+											<div class="col-md-6">
+												<label class="form-label" for="email">Email</label>
+												<input type="email" class="form-control" placeholder="Email" name="email" />
+											</div>
+											<div class="col-md-6">
+												<label class="form-label" for="phone">Phone (optional)</label>
+												<input type="tel" class="form-control" placeholder="Phone" name="phone" />
+											</div>
+											<div class="col-12">
+												<label class="form-label" for="subject">Subject</label>
+												<input type="text" class="form-control" placeholder="Subject" name="subject" required />
+											</div>
+											<div class class="col-12">
+												<label class="form-label" for="message">Message</label>
+												<textarea name="message" class="form-control" placeholder="Message" required></textarea>
+											</div>
+											<div class="p-2 text-light text-center">
+												<button class="btn btn-warning" type="submit">Submit</button>
+											</div>
 										</div>
-										<div class="col-6">
-											<label class="form-label" for="lname">Last Name</label>
-											<input type="text" class="form-control" placeholder="Last Name" name="lname" />
-										</div>
-										<div class="col-6">
-											<label class="form-label" for="email">Email</label>
-											<input type="email" class="form-control" placeholder="Email" name="email" />
-										</div>
-										<div class="col-6">
-											<label class="form-label" for="phone">Phone (optional)</label>
-											<input type="tel" class="form-control" placeholder="Phone" name="phone" />
-										</div>
-										<div class="col-12">
-											<label class="form-label" for="subject">Subject</label>
-											<input type="text" class="form-control" placeholder="Subject" name="subject" required />
-										</div>
-										<div class class="col-12">
-											<label class="form-label" for="message">Message</label>
-											<textarea name="message" class="form-control" placeholder="Message" required></textarea>
-										</div>
-										<div class="p-2 text-light text-center">
-											<button class="btn btn-warning" type="submit">Submit</button>
-										</div>
-									</div>
-								</form>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 
-			<div class="full-width bg-black border-gold text-gold p-2">
+			<!-- Footer -->
+			<div class="full-width bg-black border-gold text-gold py-2">
 				<div class="container">
-				<div class="row">
-					<div class="col-md-3 d-none d-md-block">
-						<h5>Site Links</h5>
-						<ul class="text-gold p-0 m-0 no-bullet">
-							<li class="footer-list"><a class="text-gold" href="http://digitalelegance.com">Digital Elegance | Home</a></li>
-							<li class="footer-list"><a class="text-gold" href="http://finecode.digitalelegance.com">Fine Code | Home</a></li>
-							<li class="footer-list"><a class="text-gold" href="#about">About</a></li>
-							<li class="footer-list"><a class="text-gold" href="#portfolio">Portfolio</a></li>
-							<li class="footer-list"><a class="text-gold" href="#blog">Blog</a></li>
-							<li class="footer-list"><a class="text-gold" href="#blog">Conatct</a></li>
-						</ul>
+					<div class="row">
+						<div class="col-md-3 d-none d-md-block">
+							<h5>Site Links</h5>
+							<ul class="text-gold no-bullet footer-list">
+								<li><a class="text-gold" href="http://digitalelegance.com">Digital Elegance | Home</a></li>
+								<li><a class="text-gold" href="http://finecode.digitalelegance.com">Fine Code | Home</a></li>
+								<li><a class="text-gold" href="#about">About</a></li>
+								<li><a class="text-gold" href="#portfolio">Portfolio</a></li>
+								<li><a class="text-gold" href="#blog">Blog</a></li>
+								<li><a class="text-gold" href="#blog">Conatct</a></li>
+							</ul>
+						</div>
+						<div class="col-md-3">
+							<h5></h5>
+						</div>
+						<div class="col-md-3">
+							<h5></h5>
+						</div>
+						<div class="col-md-3">
+							<h5>Contact Me</h5>
+							<ul class="text-gold no-bullet footer-list">
+								<li>Ace Baugh</li>
+								<li>Orlando, Florida</li>
+								<li>(208) 55-79-ACE (223)</li>
+								<li>
+									<a class="text-gold" href="mailto:ace.d.baugh@digitalelegance.com">ace.d.baugh@digitalelegance.com</a>
+								</li>
+							</ul>
+							<img src="" alt="linkedIn" /><img src="" alt="twitter" />
+						</div>
 					</div>
-					<div class="col-md-3">
-						<h5></h5>
-					</div>
-					<div class="col-md-3">
-						<h5></h5>
-						
-					</div>
-					<div class="col-md-3">
-						<h5>Contact Me</h5>
-						<ul class="text-gold p-0 m-0 no-bullet">
-							<li class="footer-list">Ace Baugh</li>
-							<li class="footer-list">Orlando, Florida</li>
-							<li class="footer-list">(208) 55-79-ACE (223)</li>
-							<li class="footer-list"><a class="text-gold" href="mailto:ace.d.baugh@digitalelegance.com">ace.d.baugh@digitalelegance.com</a></li>
-						</ul>
-						<img src="" alt="linkedIn"><img src="" alt="twitter">
-					</div>
-				</div>
 				</div>
 				<p class="footer-p text-center">&copy; Digital Elegance</p>
 			</div>
