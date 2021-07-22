@@ -145,7 +145,12 @@ a {
 	color: #F8F9FA;
 }
 
+.footer-p a:hover {
+	color: #F8F9FA;
+}
+
 .footer-p {
+	font-size: x-small;
 	margin-bottom: 0;
 }
 
