@@ -19,7 +19,7 @@
 
 	<body>
 		<!-- NAVBAR -->
-		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-gold border-gold">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-gold border-gold" id="mainNavbar">
 			<div class="container-fluid">
 				<!-- Navbar Logo -->
 				<div class="ps-2">
@@ -42,7 +42,7 @@
 					<ul class="navbar-nav ms-auto flex-nowrap mb-md-0">
 						<!-- Link - Home -->
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="#"
+							<a class="nav-link active" aria-current="page" id="homeLink" href="#home"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="me-1 mb-2 text-gold"
@@ -64,7 +64,7 @@
 
 						<!-- Link - About -->
 						<li class="nav-item">
-							<a class="nav-link" href="#aboutMe"
+							<a class="nav-link" id="aboutLink" href="#aboutMe"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="20"
@@ -82,13 +82,7 @@
 
 						<!-- Link - Portfolio > Dropdown -->
 						<li class="nav-item dropdown">
-							<a
-								class="nav-link dropdown-toggle"
-								href="#"
-								id="navbarDropdownMenuLink"
-								role="button"
-								data-bs-toggle="dropdown"
-								aria-expanded="false"
+							<a class="nav-link dropdown-toggle" href="#" id="portfolioLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="me-1 mb-2 text-gold"
@@ -105,7 +99,7 @@
 							>
 
 							<!-- Dropdown in Portfolio -->
-							<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+							<ul class="dropdown-menu" aria-labelledby="portfolioLink">
 								<li><a class="dropdown-item" href="#projects">Personal Projects</a></li>
 								<li><a class="dropdown-item" href="#projects">Bootcamp Projects</a></li>
 								<li><a class="dropdown-item" href="#projects">School Projects</a></li>
@@ -114,7 +108,7 @@
 
 						<!-- Link - Blog  -->
 						<li class="nav-item">
-							<a class="nav-link" href="#blog"
+							<a class="nav-link" id="blogLink" href="#blog"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="me-1 mb-2 text-gold"
@@ -137,7 +131,7 @@
 
 						<!-- Link - Contact -->
 						<li class="nav-item">
-							<a class="nav-link" href="#contact"
+							<a class="nav-link" id="contactLink" href="#contact"
 								><svg
 									xmlns="http://www.w3.org/2000/svg"
 									class="me-1 mb-2 text-gold"
@@ -158,7 +152,7 @@
 			</div>
 		</nav>
 
-		<main class="flex-shrink-0 full-height full-width">
+		<main class="flex-shrink-0 full-height full-width" id="home">
 			<section class="hero">
 				<div class="hero-content m-1">
 					<h1 class="hero-title text-gold mb-0">I Am Ace Baugh</h1>
@@ -171,7 +165,6 @@
 
 			<!-- Showcase -->
 			<div class="text-light">
-
 				<!-- About Me -->
 				<div class="bg-light text-black pb-4">
 					<div class="container pb-4">
@@ -180,7 +173,7 @@
 						<h6>Get to know me</h6>
 						<div class="row justify-content-center">
 							<div class="col-md-4 text-center">
-						<img src="..." alt="Ace" />
+								<img src="..." alt="Ace" />
 							</div>
 						</div>
 						<h5 class="text-gold thick">Who am i?</h5>
@@ -199,7 +192,7 @@
 							<div class="col-md-6">
 								<p>
 									<span class="thick">Email: &nbsp;&nbsp;</span
-									><a href="mailto:ace.d.baugh@digitalelegance.com" class="link-gold link-gold-hover">ace.d.baugh@digitalelegance.com</a>
+									><a href="mailto:ace@digitalelegance.com" class="link-gold link-gold-hover">ace@digitalelegance.com</a>
 								</p>
 							</div>
 						</div>
@@ -426,17 +419,20 @@
 								<li>Ace Baugh</li>
 								<li>Orlando, Florida</li>
 								<li>
-									<a class="text-gold"href="tel:208-557-9223">(208) 55-79-ACE (223)</a>
+									<a class="text-gold" href="tel:208-557-9223">(208) 55-79-ACE (223)</a>
 								</li>
 								<li>
-									<a class="text-gold" href="mailto:ace.d.baugh@digitalelegance.com">ace.d.baugh@digitalelegance.com</a>
+									<a class="text-gold" href="mailto:ace@digitalelegance.com">ace@digitalelegance.com</a>
 								</li>
 							</ul>
 							<img src="" alt="linkedIn" /><img src="" alt="twitter" /><img src="" alt="GitHub" />
 						</div>
 					</div>
 				</div>
-				<p class="footer-p text-center">Copyright &copy; 2021 Digital Elegance, all rights reserved. Developed by <a class="text-gold" href="mailto:ace.d.baugh@digitalelegance.com">Ace Baugh</a></p>
+				<p class="footer-p text-center">
+					Copyright &copy; 2021 Digital Elegance, all rights reserved. Developed by
+					<a class="text-gold" href="mailto:ace@digitalelegance.com">Ace Baugh</a>
+				</p>
 			</div>
 		</main>
 
