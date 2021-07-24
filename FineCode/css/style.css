@@ -1,6 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+:root {
+   --gold: #d0b64f;
+   --ltGold: #f0d547;
+   --dkGold: #916f27;
+   --dkSteel: #222;
+   --ltSteel: #444;
+   --white: #f8f9fa;
+}
+
 body {
 	background: url(../img/kitsugi.gif);
 	background-size: cover;
@@ -41,16 +50,16 @@ a {
 }
 
 .navbar-dark .navbar-nav .nav-link {
-	color: #222;
+	color: var(--dkSteel);
 }
 
 .navbar-dark .navbar-nav .nav-link:active {
-	color: #222;
+	color: var(--dkSteel);
 }
 
 .navbar-dark .navbar-toggler {
 	color: rgba(255, 255, 255, 0.55);
-	border: #d0b64f 3px groove;
+	border: var(--gold) 3px groove;
 }
 
 .header-logo {
@@ -59,7 +68,7 @@ a {
 }
 
 .header-logo:hover {
-	color: #d0b64f;
+	color: var(--gold);
 }
 
 .nav-item:hover {
@@ -182,28 +191,28 @@ a {
 }
 
 .bg-gold {
-	background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+	background-image: linear-gradient(to left bottom, var(--ltGold), var(--dkGold), var(--ltGold));
 }
 
 .border-gold {
-	border: #d0b64f 3px groove;
+	border: var(--gold) 3px groove;
 }
 
 .text-gold {
-	color: #d0b64f;
+	color: var(--gold);
 }
 
 .link-gold {
-	color: #d0b64f;
+	color: var(--gold);
 }
 
 .link-gold-hover:hover {
-	color: #222;
+	color: var(--dkSteel);
 }
 
 
 .text-black {
-	color: #222;
+	color: var(--dkSteel);
 }
 
 .bg-black {
@@ -227,5 +236,5 @@ a {
 }
 
 .bg-steel {
-	background-image: linear-gradient(to left bottom, #222, #444, #222);
+	background-image: linear-gradient(to left bottom, var(--dkSteel), var(--ltSteel), var(--dkSteel));
 }
