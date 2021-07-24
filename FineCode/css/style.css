@@ -155,16 +155,17 @@ a {
 	font-size: smaller;
 }
 
-.footer-list li {
+footer li {
 	padding-top: 4px;
 }
 
-.footer-list a:hover {
-	color: #F8F9FA;
+footer a:hover,
+footer svg:hover {
+	color: var(--white);
 }
 
 .footer-p a:hover {
-	color: #F8F9FA;
+	color: var(--white);
 }
 
 .footer-p {
