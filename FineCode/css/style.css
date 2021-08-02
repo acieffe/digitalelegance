@@ -45,6 +45,10 @@ a {
 	padding-bottom: 0;
 }
 
+.font-raleway {
+	font-family: 'Raleway', sans-serif;
+}
+
 .nav-item a {
 	font-size: 2em;
 }
@@ -62,14 +66,23 @@ a {
 	border: var(--gold) 3px groove;
 }
 
+.dropdown-item {
+	color: var(--white);
+}
+
 .dropdown-item:hover {
 	background-color: rgba(34, 34, 34, 0.4);
-	color: var(--white);
+	color: var(--gold);
 }
 
 .header-logo {
 	font-size: 3em;
 	text-decoration: none;
+}
+
+.header-logo > span {
+	font-size: smaller;
+	font-weight: 900;
 }
 
 .header-logo:hover {
@@ -165,7 +178,7 @@ footer li {
 }
 
 footer a:hover,
-footer svg:hover {
+footer i:hover {
 	color: var(--white);
 }
 
@@ -179,7 +192,7 @@ footer svg:hover {
 }
 
 @media only screen and (min-width: 992px) {
-   .nav-link svg {
+   .nav-link i {
       color: var(--gold);
    }
 }
@@ -208,12 +221,20 @@ footer svg:hover {
 	color: var(--gold);
 }
 
-.link-gold {
+.text-gb:hover {
+	color: var(--dkSteel);
+}
+
+.text-bg:hover {
 	color: var(--gold);
 }
 
-.link-gold-hover:hover {
-	color: var(--dkSteel);
+.link-white-gold-hover:hover {
+	color: var(--gold);
+}
+
+.text-gw:hover {
+	color: var(--white);
 }
 
 .text-black {
@@ -242,4 +263,27 @@ footer svg:hover {
 
 .bg-steel {
 	background-image: linear-gradient(to left bottom, var(--dkSteel), var(--ltSteel), var(--dkSteel));
+}
+
+.lists {
+	background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+	border: #d0b64f 5px groove;
+	border-radius: 20px;
+	margin: 0 auto 10px;
+	padding: 5px 20px;
+	color: black;
+}
+
+.lists a {
+	color: var(--dksteel);
+}
+
+.lists a:hover {
+	color: var(--white)
+}
+
+.screenshot {
+	width: 40%;
+	top: 100px;
+	left: 50%;
 }
