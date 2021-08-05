@@ -4,9 +4,7 @@ on:
       - main
 name: 🚀 Deploy website on push
 jobs:
-  exclude:
-    - FineArt/
-    - FineCode/
+  exclude: 'FineArt/, FineCode/'
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
