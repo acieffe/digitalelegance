@@ -4,6 +4,9 @@ on:
       - main
 name: 🚀 Deploy website on push
 jobs:
+  exclude:
+    - FineArt/
+    - FineCode/
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
@@ -18,6 +21,3 @@ jobs:
         username: ${{ secrets.ftp_username }}
         password: ${{ secrets.ftp_password }}
         server-dir: /public_html/
-exclude:
-  - FineArt/
-  - FineCode/
