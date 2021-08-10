@@ -1,21 +1,59 @@
-body {
-  text-align: center;
-  background-color: gray;
+:root {
+   --gold: #d0b64f;
+   --ltGold: #f0d547;
+   --dkGold: #916f27;
+   --dkSteel: #222;
+   --ltSteel: #444;
+   --white: #f8f9fa;
 }
 
+body {
+	text-align: center;
+	background: url(../img/kitsugi.gif);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+
 #itemSold {
-  color: black;
-  background-image: linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
-  width: 300px;
-  height: 100px;
-  border: 2px #d0b64f groove;
-  border-radius: 20px;
-  position: absolute;
-  margin: 5px;
-  left: 0px;
-  bottom: 0px;
+	color: var(--dkSteel);
+	background-image: linear-gradient(to left bottom, var(--ltGold), var(--dkGold), var(--ltGold));
+	width: 300px;
+	height: 100px;
+	border: 3px var(--gold) groove;
+	border-radius: 20px;
+	position: absolute;
+	margin: 5px;
+	left: 0px;
+	bottom: 0px;
+	display: none;
 }
 
 #itemSold h4 {
-  margin: -15px;
+	margin: -15px;
+}
+
+img {
+  border: var(--gold) 3px groove;
+  border-radius: 30px;
+}
+
+.bg-black {
+	background-color: rgba(34, 34, 34, 1);
+}
+
+.bg-black-2 {
+	background-color: rgba(34, 34, 34, 0.2);
+}
+
+.bg-black-4 {
+	background-color: rgba(34, 34, 34, 0.4);
+}
+
+.bg-black-6 {
+	background-color: rgba(34, 34, 34, 0.6);
+}
+
+.bg-black-8 {
+	background-color: rgba(34, 34, 34, 0.8);
 }
