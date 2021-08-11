@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 	<head>
-		<title>Eureka!: A Coding Project By Ace Baugh</title>
+		<title>BleepBoop: A Coding Project By Ace Baugh</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -29,7 +29,7 @@
 				<!-- Navbar Logo -->
 				<div class="ps-2">
 					<a href="http://digitalelegance.com/index.html"></a
-					><a href="index.html" class="navbar-brand header-logo"><img src="img/DE.svg" class="d-inline-block align-text-top mt-1" height="40px"> Eureka!</a>
+					><a href="index.html" class="navbar-brand header-logo"><img src="img/DE.svg" class="d-inline-block align-text-top mt-1" height="40px">BleepBoop</a>
 				</div>
 				<button
 					class="navbar-toggler border-gold"
@@ -71,7 +71,7 @@
 
 						<!-- Link - GitHub Repo -->
 						<li class="nav-item px-3 px-lg-0">
-							<a class="nav-link" id="gitLink" target="_blank" href="https://github.com/acieffe/Eureka"
+							<a class="nav-link" id="gitLink" target="_blank" href="https://github.com/acieffe/bleepboop"
 								><i class="fab fa-github me-1  h4"></i></svg
 								>Git Repo</a
 							>
@@ -92,7 +92,7 @@
 		<!-- ====== Maiu Section ====== -->
 		<main class="flex-shrink-0">
 			<div class="container my-5 px-5 py-5 bg-black-8 text-light">
-            <h2 class="border-1 border-bottom border-light">The Code for Eureka!</h2>
+            <h2 class="border-1 border-bottom border-light">The Code for BleepBoop</h2>
             <div class="row row-cols-1 row-cols-lg-2 mb-2">
 
 					<!-- Code Area -->
@@ -102,17 +102,19 @@
 // Validation on user input
 function isValid() {
 	// Get Values from Page
-	let startValue = parseInt(document.getElementById('startValue').value);
-	let endValue = parseInt(document.getElementById('endValue').value);
+	let bleepValue = parseInt(document.getElementById('bleepValue').value);
+	let boopValue = parseInt(document.getElementById('boopValue').value);
 
 	// Call Empty Table
 	emptyTable();
 
-	// Validates input (makes sure numbers are within rage, start:1-20 | end 21-1,000,000)
-	if (startValue < 1 || startValue > 20 || endValue < 21 || endValue > 1000000) {
-		alert('Please enter a correct Start Value (1-20) or End Value (21-1,000,000)');
+	// Validates input (makes sure numbers are within rage, bleep:2-9 | boop 3-10)
+	if (bleepValue < 2 || bleepValue > 9 || boopValue < 3 || boopValue > 10 || bleepValue === "" || boopValue === "") {
+		alert('Please enter a correct Bleep Value (2-9) or Boop Value (3-10)');
+	} else if (bleepValue === boopValue) { // or if they are the same
+		alert('Please enter different Bleep and Boop Values: Bleep and Boop cannot be the same.');
 	} else {
-		calcValues(startValue, endValue);
+		iterateValues(bleepValue, boopValue);
 	}
 }
 
@@ -124,75 +126,85 @@ function emptyTable() {
 	}
 }
 
-// Calculate Values
-function calcValues(startValue, endValue) {
-	// Generate squence numbers
-	let fibNum01 = startValue;
-	let fibNum02 = startValue;
+// Sequentially goes through numbers 1 through 100
+function iterateValues(bleepValue, boopValue) {
+	let start = 1;
+	let end = 100;
 
-	// Loop Through numbers till endValue
-	while (fibNum01 <= endValue) {
-		// Call printValue
-		printValue(fibNum01);
-
-		// Advance numbers in sequence
-		fibRes = fibNum01 + fibNum02;
-		fibNum01 = fibNum02;
-		fibNum02 = fibRes;
+	for (let num = start; num <= end; num++) {
+		if (bleepBoop(num, bleepValue, boopValue)) { // if divisible by both
+			printValues('BleepBoop');
+		} else if (bleep(num, bleepValue)) { // if divisible by one
+			printValues('Bleep');
+		} else if (boop(num, boopValue)) { // if divisible by the other
+			printValues('Boop');
+		} else {
+			printValues(num);
+		}
 	}
 }
 
 // Output Values to Page
-function printValue(resultNum) {
+function printValues(printValue) {
 	let tr = document.createElement('tr');
 	let td = document.createElement('td');
-	let b = document.createElement('b');
 
-	// Calls isPrime to give different output if it is a prime number
-	if (isPrime(resultNum)) {
-		document.getElementById('results').appendChild(tr).appendChild(td).appendChild(b).innerHTML = resultNum + ' is Prime!';
+	document.getElementById('results').appendChild(tr).appendChild(td).innerHTML = printValue;
+}
+
+// This function checks if the current iteration number is divisable by the bleep and boop values
+function bleepBoop(num, bleepValue, boopValue) {
+	if (num % bleepValue === 0 && num % boopValue === 0) {
+		return true;
 	} else {
-		document.getElementById('results').appendChild(tr).appendChild(td).innerHTML = resultNum;
+		return false;
 	}
 }
 
-// Checks if number is Prime
-function isPrime(num) {
-	let sum = true;
-	if (num > 1) {
-		for (let i = num - 1; i > 1; i--) {
-			if (num % i === 0) {
-				sum = false;
-				break;
-			}
-		}
+// This function checks if the current iteration number is divisable by the bleep value
+function bleep(num, bleepValue) {
+	if (num % bleepValue === 0) {
+		return true;
 	} else {
-		sum = false;
+		return false;
 	}
-	return sum;
-}                     
+}
+
+// This function checks if the current iteration number is divisable by the boop value
+function boop(num, boopValue) {
+	if (num % boopValue === 0) {
+		return true;
+	} else {
+		return false;
+	}
+}
 							</code>
                   </pre>
                </div>
 
 					<!-- Code Description Area -->
                <div class="col-lg-4 pb-5 mb-5 ">
-                  <p>The Code is structured in the folllowing functions:</p>
+                  <p>The Code is structured in the following functions:</p>
                   <h5>isValid</h5>
-                  <p>This function checks to see if the user input is valid and within range where the start value must be between 1 and 20 and the end value must be between 21 and 1,000,000. If it isn't there is an alert telling the user to enter the correct numbers. If it is, it calls calcValues passing the user inputs. Also tucked in here is a clearing of any previous tables generated by the user by calling the emptyTable function</p>
+                  <p>This function checks to see if the user inputs are valid and not just empty values or values out of range. Also tucked in here is a clearing of any previous tables generated by the user by calling the emptyTable function</p>
                   <h5>emptyTable</h5>
                   <p>This function loops through the table children and deletes each one until the table is empty. Can be called upon by the user from the page as well.</p>
-                  <h5>calcValues</h5>
-                  <p>This function takes in the user inputs and loops through calling to printValue function on the newly stored first value. It then claculates the next fibbonacci sequence number and stores it in the first value. </p>
-                  <h5>printValue</h5>
-                  <p>This function creates table row, table data, and bold elements and appends them to the current table checking to see if the value is prime by calling the isPrime function.</p>
-                  <h5>isPrime</h5>
-                  <p>This function returns a boolean answer to see if the value sent to it is prime by verifying it is only divisable by itself and the number 1.</p>
+                  <h5>iterateValues</h5>
+                  <p>This function takes in the user inputs and loops through numbers 1-100 and calls to see if the current iteration is divisible by the user inputs. It then calls the printValues function and sends to desired output.</p>
+                  <h5>printValues</h5>
+                  <p>This function creates table row, table data, and appends them to the current table as well as the passed value.</p>
+                  <h5>bleepBoop</h5>
+                  <p>This function returns true if the passed value is divisible by the passed user input, false if it isn't.</p>
+                  <h5>bleep</h5>
+                  <p>This function returns true if the passed value is divisible by the passed user input, false if it isn't.</p>
+                  <h5>boop</h5>
+                  <p>This function returns true if the passed value is divisible by the passed user input, false if it isn't.</p>
                </div>
 					<div class="col-12 d-none d-lg-block my-4"></div> <!-- Gives more padding under code section -->
             </div>
 			</div>
 		</main>
+
 
 		<!-- ====== Footer ======= -->
 		<footer class="full-width footer-radius fixed-bottom bg-black border-gold text-gold pb-2">
@@ -247,6 +259,7 @@ function isPrime(num) {
 				<a class="text-gold" href="mailto:ace@digitalelegance.com">Ace Baugh | ace@digitalelegance.com</a>
 			</p>
 		</footer>
+
 
 		<!-- Bootstrap JS -->
 		<script

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
 	<head>
-		<title>Eureka!: A Coding Project By Ace Baugh</title>
+		<title>BleepBoop: A Coding Project By Ace Baugh</title>
 		<!-- Required meta tags -->
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -18,7 +18,6 @@
 
 		<link href="css/all.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/site.css" />
-		<link rel="stylesheet" href="css/prism.css" />
 	</head>
 
 	<body class="d-flex flex-column h-100">
@@ -29,7 +28,7 @@
 				<!-- Navbar Logo -->
 				<div class="ps-2">
 					<a href="http://digitalelegance.com/index.html"></a
-					><a href="index.html" class="navbar-brand header-logo"><img src="img/DE.svg" class="d-inline-block align-text-top mt-1" height="40px"> Eureka!</a>
+					><a href="index.html" class="navbar-brand header-logo"><img src="img/DE.svg" class="d-inline-block align-text-top mt-1" height="40px">BleepBoop</a>
 				</div>
 				<button
 					class="navbar-toggler border-gold"
@@ -49,7 +48,7 @@
 						
                   <!-- Link - Home  -->
 						<li class="nav-item px-3 px-lg-0">
-							<a class="nav-link" id="homeLink" href="index.html"
+							<a class="nav-link active" aria-current="page" id="homeLink" href="index.html"
 								><i class="fas fa-home me-1  h4"></i>Home</a
 							>
 						</li>
@@ -64,14 +63,14 @@
 
 						<!-- Link - The Code -->
 						<li class="nav-item px-3 px-lg-0">
-							<a class="nav-link active" aria-current="page" id="codeLink" href="code.html"
+							<a class="nav-link" id="codeLink" href="code.html"
 								><i class="fas fa-code me-1  h4"></i>The Code</a
 							>
 						</li>
 
 						<!-- Link - GitHub Repo -->
 						<li class="nav-item px-3 px-lg-0">
-							<a class="nav-link" id="gitLink" target="_blank" href="https://github.com/acieffe/Eureka"
+							<a class="nav-link" id="gitLink" target="_blank" href="https://github.com/acieffe/bleepboop"
 								><i class="fab fa-github me-1  h4"></i></svg
 								>Git Repo</a
 							>
@@ -90,107 +89,37 @@
 		</nav>
 
 		<!-- ====== Maiu Section ====== -->
-		<main class="flex-shrink-0">
-			<div class="container my-5 px-5 py-5 bg-black-8 text-light">
-            <h2 class="border-1 border-bottom border-light">The Code for Eureka!</h2>
-            <div class="row row-cols-1 row-cols-lg-2 mb-2">
-
-					<!-- Code Area -->
-               <div class="col-lg-8 mb-lg-5">
-                  <pre class="line-numbers">
-                     <code class="language-javascript">
-// Validation on user input
-function isValid() {
-	// Get Values from Page
-	let startValue = parseInt(document.getElementById('startValue').value);
-	let endValue = parseInt(document.getElementById('endValue').value);
-
-	// Call Empty Table
-	emptyTable();
-
-	// Validates input (makes sure numbers are within rage, start:1-20 | end 21-1,000,000)
-	if (startValue < 1 || startValue > 20 || endValue < 21 || endValue > 1000000) {
-		alert('Please enter a correct Start Value (1-20) or End Value (21-1,000,000)');
-	} else {
-		calcValues(startValue, endValue);
-	}
-}
-
-// Empty the Table of values on the page
-function emptyTable() {
-	let table = document.getElementById('results');
-	while (table.firstChild) {
-		table.removeChild(table.firstChild);
-	}
-}
-
-// Calculate Values
-function calcValues(startValue, endValue) {
-	// Generate squence numbers
-	let fibNum01 = startValue;
-	let fibNum02 = startValue;
-
-	// Loop Through numbers till endValue
-	while (fibNum01 <= endValue) {
-		// Call printValue
-		printValue(fibNum01);
-
-		// Advance numbers in sequence
-		fibRes = fibNum01 + fibNum02;
-		fibNum01 = fibNum02;
-		fibNum02 = fibRes;
-	}
-}
-
-// Output Values to Page
-function printValue(resultNum) {
-	let tr = document.createElement('tr');
-	let td = document.createElement('td');
-	let b = document.createElement('b');
-
-	// Calls isPrime to give different output if it is a prime number
-	if (isPrime(resultNum)) {
-		document.getElementById('results').appendChild(tr).appendChild(td).appendChild(b).innerHTML = resultNum + ' is Prime!';
-	} else {
-		document.getElementById('results').appendChild(tr).appendChild(td).innerHTML = resultNum;
-	}
-}
-
-// Checks if number is Prime
-function isPrime(num) {
-	let sum = true;
-	if (num > 1) {
-		for (let i = num - 1; i > 1; i--) {
-			if (num % i === 0) {
-				sum = false;
-				break;
-			}
-		}
-	} else {
-		sum = false;
-	}
-	return sum;
-}                     
-							</code>
-                  </pre>
-               </div>
-
-					<!-- Code Description Area -->
-               <div class="col-lg-4 pb-5 mb-5 ">
-                  <p>The Code is structured in the folllowing functions:</p>
-                  <h5>isValid</h5>
-                  <p>This function checks to see if the user input is valid and within range where the start value must be between 1 and 20 and the end value must be between 21 and 1,000,000. If it isn't there is an alert telling the user to enter the correct numbers. If it is, it calls calcValues passing the user inputs. Also tucked in here is a clearing of any previous tables generated by the user by calling the emptyTable function</p>
-                  <h5>emptyTable</h5>
-                  <p>This function loops through the table children and deletes each one until the table is empty. Can be called upon by the user from the page as well.</p>
-                  <h5>calcValues</h5>
-                  <p>This function takes in the user inputs and loops through calling to printValue function on the newly stored first value. It then claculates the next fibbonacci sequence number and stores it in the first value. </p>
-                  <h5>printValue</h5>
-                  <p>This function creates table row, table data, and bold elements and appends them to the current table checking to see if the value is prime by calling the isPrime function.</p>
-                  <h5>isPrime</h5>
-                  <p>This function returns a boolean answer to see if the value sent to it is prime by verifying it is only divisable by itself and the number 1.</p>
-               </div>
-					<div class="col-12 d-none d-lg-block my-4"></div> <!-- Gives more padding under code section -->
-            </div>
+		<main class="flex-shrink-0 d-flex pb-5">
+			<div class="container col-xxl-8 px-4 py-5 bg-black-8 text-light">
+				<div class="row g-5 py-5 row-cols-1 row-cols-lg-2 h-100">
+					<div class="col order-last order-lg-first">
+						<h1 class="display-5 fw-bold lh-1 mb-3">BleepBoop: A Coding Bootcamp Project</h1>
+						<h4 class="lead">This program takes in user input of two numbers and displays all the numbers between 1 and 100 on the page. Although, if the number is divisable by the user's first number (bleep value) it will not produce the number but the word "Bleep". If the number is divisable by the Boop value, it replaces the number with the word "Boop". If the number is divisable by Bleep and Boop, then the number is replaced by the combination "BleepBoop"!</h4>
+						<ul class="fa-ul pt-2 checklist">
+							<li><span class="fa-li"><i class="fas fa-check-square"></i></span>CSS and Bootstrap Layout</li>
+							<li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Fundamentals</li>
+							<li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Conditionals</li>
+							<li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Functions</li>
+							<li><span class="fa-li"><i class="fas fa-check-square"></i></span>Javascript Dom Manipulation</li>
+						</ul>
+						<div>
+							<a type="button" href="app.html" class="btn btn-outline-warning bt-lg px-4 me-md-2">Try it out</a>
+						</div>
+						<h5 class="fw-bold mt-3 mb-5">
+							<div class="d-flex pb-3">
+								<div class="row text-gold">
+									<div class="col"><i class="fab fa-html5 fa-3x"></i></div>
+									<div class="col"><i class="fab fa-css3-alt fa-3x"></i></div>
+									<div class="col"><i class="fab fa-bootstrap fa-3x"></i></div>
+									<div class="col"><i class="fab fa-js-square fa-3x"></i></div>
+								</div>
+							</div>
+						</h5>
+					</div>
+					<div class="col">
+						<img src="img/bleepboop.png" class="img-fluid center-block d-block mx-auto" alt="BleepBoop Logo" width="700" height="500">
+					</div>
+				</div>
 			</div>
 		</main>
 
@@ -248,6 +177,7 @@ function isPrime(num) {
 			</p>
 		</footer>
 
+
 		<!-- Bootstrap JS -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -259,14 +189,5 @@ function isPrime(num) {
 			integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/prism.js"></script>
-      <script>
-         Prism.plugins.NormalizeWhitespace.setDefaults({
-            'remove-trailing': true,
-            'remove-indent': true,
-            'left-trim': true,
-            'right-trim': true
-         })
-      </script>
 	</body>
 </html>
