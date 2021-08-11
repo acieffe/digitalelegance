@@ -152,7 +152,7 @@ function printValues(printValue) {
 	document.getElementById('results').appendChild(tr).appendChild(td).innerHTML = printValue;
 }
 
-// This function checks if the current iteration number is divisable by the bleep and boop values
+// This function checks if the current iteration number is divisible by the bleep and boop values
 function bleepBoop(num, bleepValue, boopValue) {
 	if (num % bleepValue === 0 && num % boopValue === 0) {
 		return true;
@@ -161,7 +161,7 @@ function bleepBoop(num, bleepValue, boopValue) {
 	}
 }
 
-// This function checks if the current iteration number is divisable by the bleep value
+// This function checks if the current iteration number is divisible by the bleep value
 function bleep(num, bleepValue) {
 	if (num % bleepValue === 0) {
 		return true;
@@ -170,7 +170,7 @@ function bleep(num, bleepValue) {
 	}
 }
 
-// This function checks if the current iteration number is divisable by the boop value
+// This function checks if the current iteration number is divisible by the boop value
 function boop(num, boopValue) {
 	if (num % boopValue === 0) {
 		return true;
