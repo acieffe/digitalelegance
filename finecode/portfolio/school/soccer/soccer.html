@@ -1,0 +1,59 @@
+<!--
+  Assignment: Soccer Enrollment
+  Author: Matthew Baugh
+  Date: 8/23/2020
+  Purpose: This page will allow the coach to enter in as many ages as wanted and
+  sort them into Junior, Intermediate, and Senior Leagues and shows how many
+  children have signed up.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Soccer Enrollment</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Soccer Enrollment</h1>
+
+    <div id="inputField">
+      <label for="playAge">Player's Age</label><br />
+      <input type="num" name="playAge" id="playAge"
+        placeholder="4-15" value="" min="4" max="15"><br />
+
+      <button type="button" name="button" onclick="addChild()">
+        Add Child
+      </button>
+    </div>
+
+    <div id="results" style="display: none;">
+      <h2 id="totalPlay">Total Players</h2>
+      <h3 id="showTotal"></h3>
+      <div class="leagueHolder">
+        <div class="leagues" id="jrLeague">
+          <h3>Junior League (4-7)</h3>
+          <p><strong id="jlPlay"></strong> Player(s)</p>
+        </div>
+        <div class="leagues" id="intLeague">
+          <h3>Intermediate League (8-11)</h3>
+          <p><strong id="ilPlay"></strong> Player(s)</p>
+        </div>
+        <div class="leagues" id="srLeague">
+          <h3>Senior League (12-15)</h3>
+          <p><strong id="slPlay"></strong> Player(s)</p>
+        </div>
+      </div>
+      <button type="button" name="button" onclick="clearAll()">
+        Clear All
+      </button>
+    </div>
+  </body>
+</html>

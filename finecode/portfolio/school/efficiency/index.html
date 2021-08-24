@@ -1,0 +1,342 @@
+<!--
+  Assignment: Attraction Efficiency Tracker
+  Author: Matthew Baugh
+  Date: 8/20/2020
+  Purpose: To provide accurate attraction efficiency recommendations based
+     on user data entered. Users will be prompted to enter data for specific
+     attractions and the app will analyze that information in graph form.
+  Credit: This is based on the Thyroid App in Chapter 5, 6 & 7
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Attraction Efficiency Tracker</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css">
+    <link rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="css/extraFormat.css">
+
+    <!--JS-->
+    <script src="scripts/jquery-1.8.3.min.js"></script>
+    <script src="scripts/chromeFileProtocolFix.js"></script>
+    <script src="scripts/jquery.mobile-1.3.1.min.js"></script>
+  </head>
+
+  <body>
+    <!--User Login Page-->
+    <div data-role="page" id="pageHome">
+      <div data-role="header">
+        <h1>Attraction Efficiency Tracker</h1>
+      </div>
+
+      <div data-role="content">
+        <label for="attrCode">Attraction ID Code:</label>
+        <input type="number" id="attrCode">
+
+        <div data-role="controlgroup" id="numKeyPad">
+          <a data-role="button" id="btnEnter" type="submit">Enter</a>
+          <a href="#pageAbout" data-role="button">About</a>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a data-role="button" onclick="addValueToCode(7);">7</a>
+          <a data-role="button" onclick="addValueToCode(8);">8</a>
+          <a data-role="button" onclick="addValueToCode(9);">9</a>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a data-role="button" onclick="addValueToCode(4);">4</a>
+          <a data-role="button" onclick="addValueToCode(5);">5</a>
+          <a data-role="button" onclick="addValueToCode(6);">6</a>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a data-role="button" onclick="addValueToCode(1);">1</a>
+          <a data-role="button" onclick="addValueToCode(2);">2</a>
+          <a data-role="button" onclick="addValueToCode(3);">3</a>
+        </div>
+        <div data-role="controlgroup" data-type="horizontal">
+          <a data-role="button" onclick="addValueToCode(0);">0</a>
+          <a data-role="button" onclick="addValueToCode('bksp');"
+            data-icon="delete">del</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Disclaimer Page-->
+    <div data-role="page" id="effNotice" data-close-btn="none">
+      <div data-role="header">
+        <h1>Efficiency Tracker Disclaimer</h1>
+      </div>
+
+      <div data-role="content">
+        <p>
+          As you know, the concept of the tally clicker is centuries old.
+          And really, that’s all this is, except that instead of a clicker,
+          we're using a digital one. This will track for one hour. We might,
+          one day, go as high as 12, but we really don’t know what that would do
+          to you, so let’s just start with what we have. What did this do to you?
+          Tell me. And remember, this is for posterity, so… be honest.
+          How do you feel?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          ~Princess Bride
+        </p>
+        <br>
+
+        <a href="#pageAttrInfo" id="noticeYes" data-role="button"
+          data-icon="forward" data-mini="false">Good</a>
+      </div>
+    </div>
+
+    <!--About Page-->
+    <div data-role="page" id="pageAbout">
+      <div data-role="header">
+        <a href="#pageHome" data-role="button" data-icon="bars"
+          data-iconpos="left">Home</a>
+        <h1>Info</h1>
+      </div>
+
+      <div data-role="content">
+        The purpose of this application is to track the number of people coming
+        to the specified attraction and compare that number day to day and give
+        recommendations based on the calculated target number of people per hour.
+        Here you will be able to create an attraction profile and enter in an
+        hourly number of people who have experienced the attraction.
+      </div>
+    </div>
+
+    <!--Attraction Information Page/Form-->
+    <div data-role="page" id="pageAttrInfo">
+      <div data-role="header">
+        <a href="#pageMenu" data-role="button" data-icon="bars"
+          data-iconpos="left" data-inline="true">Menu</a>
+        <a href="#pageAbout" data-role="button" data-icon="info"
+          data-iconpos="right" data-inline="true">Info</a>
+        <h1>Attraction Information</h1>
+      </div>
+
+      <div data-role="content">
+        <form id="frmAttrForm" action="">
+          <div data-role="fieldcontain">
+            <label for="txtAttrName">Attraction Name: </label>
+            <input type="text" placeholder="Attraction Name" name="txtAttrName"
+              data-mini="false" id="txtAttrName" value="" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="txtParkLoc">Park Location: </label>
+            <input type="text" placeholder="Park Location" name="txtParkLoc"
+              data-mini="false" id="txtParkLoc" value="" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="txtAreaLoc">Area Location: </label>
+            <input type="text" placeholder="Area Location" name="txtAreaLoc"
+              data-mini="false" id="txtAreaLoc" value="" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="numAttrCode">Edit Attraction Code: </label>
+            <input type="number" placeholder="010101"
+              name="numAttrCode" data-mini="false" id="numAttrCode"
+              value="" min="10101" max="999999" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <h4>Attraction Duration:</h4>
+            <label for="numDurMin">Min</label>
+            <input type="number" min="0" max="45"
+              name="numDurMin" data-mini="false"
+              id="numDurMin" value="" required>
+
+            <label for="numDurSec">Sec</label>
+            <input type="number" min="0" max="60"
+              name="numDurSec" data-mini="false"
+              id="numDurSec" value="" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="numVehicles">Number of vehicles: </label>
+            <input type="number" placeholder="Number of vehicles"
+              name="numVehicles" data-mini="false" min="1" max="40"
+              id="numVehicles" value="" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <label for="numCapacity">Vehicle Capacity: </label>
+            <input type="number" placeholder="Vehicle Capacity"
+              name="numCapacity" data-mini="false" min="1" max="40"
+              id="numCapacity" value="" required>
+          </div>
+
+          <div data-role="fieldcontain">
+            <h4>Target Dispatch Interval:</h4>
+            <label for="numIntMin">Min</label>
+            <input type="number" min="0" max="10"
+              name="numIntMin" data-mini="false"
+              id="numIntMin" value="" required>
+
+            <label for="numIntSec">Sec</label>
+            <input type="number" min="0" max="60"
+              name="numIntSec" data-mini="false"
+              id="numIntSec" value="" required>
+          </div>
+
+          <input type="submit" id="btnAttrUpdate" data-icon="check"
+            data-iconpos="left" value="Update" data-inline="true">
+        </form>
+      </div>
+    </div>
+
+    <!--Menu Page-->
+    <div data-role="page" id="pageMenu">
+      <div data-role="header">
+        <a href="#pageMenu" data-role="button" data-icon="bars"
+          data-iconpos="left" data-inline="true">Menu</a>
+        <a href="#pageAbout" data-role="button" data-icon="info"
+          data-iconpos="right" data-inline="true">Info</a>
+        <h1>Attraction Efficiency</h1>
+      </div>
+
+      <div data-role="content">
+        <div data-role="controlgroup">
+          <a href="#pageAttrInfo" data-role="button">Attraction Info</a>
+          <a href="#pageAttrData" data-role="button">Attraction Data</a>
+          <a href="#pageGraph" data-role="button">Graph</a>
+          <a href="#pageAdvice" data-role="button">Suggestions</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Attraction Data Page-->
+    <div data-role="page" id="pageAttrData">
+      <div data-role="header">
+        <a href="#pageMenu" data-role="button" data-icon="bars"
+          data-iconpos="left" data-inline="true">Menu</a>
+        <a href="#pageAbout" data-role="button" data-icon="info"
+          data-iconpos="right" data-inline="true">Info</a>
+        <h1>Attraction Data</h1>
+      </div>
+
+      <div data-role="content">
+        <!--Attraction's Information Section-->
+        <div data-role="fieldcontain" id="divAttrSection">
+
+        </div>
+
+        <h2 style="text-align: center;">Data Collected</h2>
+
+        <div data-role="fieldcontain">
+          <!--Data Table-->
+          <table id="tblData" class="ui-responsive table-stroke">
+
+          </table>
+        </div>
+
+        <div data-role="fieldcontain">
+          <a href="#pageNewDataForm" id="btnAddData" data-role="button"
+            data-icon="plus">Add New Data</a>
+          <a href="#" data-role="button" id="btnClearData"
+            data-icon="delete">Clear Data</a>
+        </div>
+      </div>
+    </div>
+
+    <!--New Data Form Page-->
+    <div data-role="page" id="pageNewDataForm">
+      <div data-role="header">
+        <a href="#pageMenu" data-role="button" data-icon="bars"
+          data-iconpos="left" data-inline="true">Menu</a>
+        <a href="#pageAbout" data-role="button" data-icon="info"
+          data-iconpos="right" data-inline="true">Info</a>
+        <h1>New Data</h1>
+      </div>
+
+      <div data-role="content">
+        <form id="frmNewDataForm" action="">
+          <div data-role="fieldcontain">
+            <div data-role="fieldcontain">
+              <label for="datInputDateTime">Date and Hour Ending: </label>
+              <!--
+                Time input restricts user from entering any minute information
+                as it is requested to enter specific hour ending.
+              -->
+              <input type="datetime-local" name="datInputDateTime"
+                data-mini="false" step="3600" id="datInputDateTime" value="">
+            </div>
+
+            <div data-role="fieldcontain">
+              <label for="numTotalPeople">Total People: </label>
+              <input type="number" placeholder="0" name="numTotalPeople"
+                data-mini="false" id="numTotalPeople"
+                min="0" max="4999" value="">
+            </div>
+          </div>
+          <input type="submit" id="btnSubmitData" value="">
+        </form>
+      </div>
+    </div>
+
+    <!--Graph Page-->
+    <div data-role="page" id="pageGraph" class="test">
+      <div data-role="header">
+        <a href="#pageMenu" data-role="button" data-icon="bars"
+          data-iconpos="left" data-inline="true">Menu</a>
+        <a href="#pageAbout" data-role="button" data-icon="info"
+          data-iconpos="right" data-inline="true">Info</a>
+        <h1>Analyze</h1>
+      </div>
+
+      <!--
+        This requires the Bootstrap CSS file to work.
+        We will use a CDN to get it.
+        You can copy it from https://getbootstrap.com/docs/3.3/getting-started/
+      -->
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h2 class="panel-title">Capacity Over Time</h2>
+        </div>
+
+        <div class="panel-body">
+          <canvas id="GraphCanvas" width="500" height="500"
+            style="border:1px solid #000000;"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!--Advice Page-->
+    <div data-role="page" id="pageAdvice">
+      <div data-role="header">
+        <a href="#pageMenu" data-role="button" data-icon="bars"
+          data-iconpos="left" data-inline="true">Menu</a>
+        <a href="#pageAbout" data-role="button" data-icon="info"
+          data-iconpos="right" data-inline="true">Info</a>
+        <h1>Suggestions</h1>
+      </div>
+
+      <div data-role="content">
+        <canvas id="AdviceCanvas" width="550" height="550"
+          style="border:1px solid #000000;"></canvas>
+      </div>
+    </div>
+
+    RGraph Files
+    <script src="scripts/RGraph.common.core.js"></script>
+    <script src="scripts/RGraph.common.effects.js"></script>
+    <script src="scripts/RGraph.line.js"></script>
+    <script src="scripts/RGraph.cornergauge.js"></script>
+    <script src="scripts/RGraph.hprogress.js"></script>
+
+    <!--Custom JavaScript files-->
+    <script src="scripts/attrForm.js"></script>
+    <script src="scripts/connect.js"></script>
+    <script src="scripts/pageLoader.js"></script>
+    <script src="scripts/attrData.js"></script>
+    <script src="scripts/advice.js"></script>
+    <script src="scripts/graph.js"></script>
+
+  </body>
+</html>

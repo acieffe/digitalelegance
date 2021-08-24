@@ -1,0 +1,85 @@
+<!--
+  Assignment: Dice Game
+  Author: Matthew Baugh
+  Date: 8/22/2020
+  Purpose: In this game, the player will roll two dice and the computer will
+  roll two dice. The Math.random() method will be used to generate each roll
+  of a die, from 1 to 6. The sum of the computer’s roll should be compared to
+  the sum of the player’s roll and whoever has the greater sum is the winner of
+  that round. The sum of the winner’s roll for that round should be added to
+  his or her point total. Use functions to call for each roll of two dice and
+  the sum, for keeping track of the points, and to allow the player to continue
+  or quit after a round of play. The following are the game rules: If one player
+  rolls doubles (i.e., two fours or two sixes, etc.) and is a winner for that
+  round, he or she should get double points. If one player rolls doubles but
+  is not a winner, nothing special happens. If the two sums for any round are
+  a tie, no one gets any points. The game ends when either player reaches at
+  least 100 points or when the human player wants to quit.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dice Game</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+    <div id="wrap">
+      <h1>Dice Game</h1>
+
+      <div class="buttons" id="startBtn" onclick="roll()"
+        style="display: none;">
+          <h3>Start Over</h3>
+      </div>
+
+      <div class="buttons" id="rollBtn" onclick="roll()"
+        style="display: block;">
+          <h3>Roll Dice</h3>
+      </div>
+
+      <div id="gameBoard">
+        <div id="playerSide">
+          <div id="playGameTot">
+            <h4>Player's Score</h4>
+            <p id="playScore">00</p>
+          </div>
+          <div id="playDice">
+            <img src="images/play6.png" alt="Player Dice 6" id="playDie01" />
+            <img src="images/play6.png" alt="Player Dice 6" id="playDie02" />
+          </div>
+        </div>
+
+        <div id="computerSide">
+          <div id="compGameTot">
+            <h4>Computer's Score</h4>
+            <p id="compScore">00</p>
+          </div>
+          <div id="compDice">
+            <img src="images/comp6.png" alt="Computer Dice 6" id="compDie01" />
+            <img src="images/comp6.png" alt="Computer Dice 6" id="compDie02" />
+          </div>
+        </div>
+      </div>
+
+      <div id="winZone">
+        <h1 id="winner"></h1>
+        <h2 id="winTot"></h2>
+      </div>
+
+      <div class="buttons" id="quitBtn" onclick="clearScores()"
+        style="display: none;">
+          <h3>Quit Game</h3>
+      </div>
+
+    </div>
+  </body>
+</html>

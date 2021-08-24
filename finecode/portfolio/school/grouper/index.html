@@ -1,0 +1,84 @@
+<!--
+  Author: Matthew Baugh
+  Date: 7/29/2020
+  Credit: Based on Physics Projectile App in Chapter 3 of Building
+    Cross-Platform Mobile and Web Apps for Engineers and Scientists: An Active
+    Learning Approach , 1st Edition by Pawan Lingras; Matt Triff; Rucha Lingras
+    Also the Duration App in Week 3 Reading
+  Purpose: This random number generator is a way for trainers of theme park
+    attractions to generate numbers closer to real life by weighted probability
+    of particular party sizes. (ie parties of 3,4,6 are more likely to come up
+    than 10, 11, 12, but those larger groups do come up) This makes training an
+    attraction easier and more accurate.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouper Training App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.1.min.css" />
+    <link rel="stylesheet" href="css/grouper.css" />
+
+    <!-- JS -->
+    <script src="scripts/jquery-1.8.3.min.js"></script>
+    <script src="scripts/chromeFileProtocolFix.js"></script>
+    <script src="scripts/jquery.mobile-1.3.1.min.js"></script>
+    <script src="scripts/grouping.js"></script>
+
+
+  </head>
+  <body onload="initialize()">
+    <div data-role="page">
+      <div data-role="header">
+        <div data-role="navbar">
+          <ul>
+            <li>
+              <a href="index.html" class="ui-btn-active ui-state-persist">
+                Interface
+              </a>
+            </li>
+            <li>
+              <a href="information.html">Information</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div data-role="content">
+        <h1>Grouper Training App</h1>
+
+        <!-- User input for Maximum Party Size -->
+        <label for="maxPartySize">
+          Please Enter the Maximum Number of People Per Party
+        </label>
+        <input name="maxPartySize" id="maxPartySize" type="number" min="2" max="40"
+        placeholder="2-40">
+
+        <!-- User input for Maximum Number of Upcoming Parties -->
+        <label for="maxParties">
+          Please Enter How Many Upcoming Parties You Would Like to See
+        </label>
+        <input name="maxParties" id="maxParties" type="number" min="1" max="10"
+        placeholder="1-10">
+
+        <!-- button to initiate backend calculations -->
+        <button id="grouperButton" onclick="verifyNumbers()">Show Parties</button>
+
+        <!-- button to clear all outputs in tables -->
+        <button id="clearTable" onclick="clearTable()">Clear Table</button>
+
+        <!-- Output of calculated values -->
+        <div id="upcomingParties">
+          <!-- Table Go Here -->
+        </div>
+      </div>
+      <div data-role="footer">
+        <small>Grouper Training App</small>
+      </div>
+    </div>
+  </body>
+</html>

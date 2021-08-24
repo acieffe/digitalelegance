@@ -1,0 +1,39 @@
+<!--
+  Assignment: Letter Grade Generator
+  Author: Matthew Baugh
+  Date: 8/21/2020
+  Purpose: Takes a grade and outputs the letter grade associated with it.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Letter Grade Generator</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Letter Grade Generator</h1>
+
+    <div id="inputField">
+      <label for="numGrade">Enter Grade</label><br />
+      <input type="number" name="numGrade" id="numGrade"
+        placeholder="98.6" min="0" max="100" value=""><br />
+
+      <button type="button" name="button" onclick="gradeGenerator()">
+        Convert Grade
+      </button>
+    </div>
+
+    <h3 id="head3"></h3>
+    <p id="showGrade"></p>
+
+  </body>
+</html>

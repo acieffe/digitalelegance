@@ -1,0 +1,48 @@
+/*
+  Assignment: Letter Grade Generator
+  Author: Matthew Baugh
+  Date: 8/21/2020
+  Purpose: Style the page with Gold accents
+*/
+
+body {
+  background-color: black;
+  color: #d0b64f;
+}
+
+h1 {
+  text-align: center;
+}
+
+#inputField, #again {
+  background-image:
+    linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+  border: #d0b64f 5px groove;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 180px;
+  color: black;
+}
+
+h3 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: -10px;
+  font-family: fantasy;
+  font-size: 35vmin;
+  text-align: center;
+}
+
+img {
+  z-index: 100;
+  position: absolute;
+  bottom: 1px;
+  right: 0px;
+}
+
+#again {
+  display: none;
+}

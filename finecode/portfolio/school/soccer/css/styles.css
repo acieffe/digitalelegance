@@ -1,0 +1,83 @@
+/*
+  Assignment: Soccer Enrollment
+  Author: Matthew Baugh
+  Date: 8/23/2020
+  Purpose: Style the page with Gold accents
+*/
+
+body {
+  background-color: black;
+  color: #d0b64f;
+  text-align: center;
+}
+
+h1, h2, h2, p {
+
+}
+
+#inputField {
+  background-image:
+    linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+  border: #d0b64f 5px groove;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 0 auto;
+  width: 250px;
+}
+
+label {
+  color: black;
+}
+
+input {
+  background-color: rgba(0, 0, 0, .80);
+  color: white;
+  margin-bottom: 5px;
+}
+
+input:hover {
+  background-color: rgba(255, 255, 255, .50);
+  color: black;
+}
+
+input:active {
+  background-color: rgba(255, 255, 255, .50);
+  color: black;
+}
+
+button {
+  padding: 5px 0;
+  background-color: black;
+  color: white;
+  margin: 0 auto;
+  width: 120px;
+}
+
+#results {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.leagueHolder {
+  display: flex;
+  flex-flow: row;
+  margin-bottom: 10px;
+}
+
+.leagues {
+  flex: 1;
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+#jrLeague {
+  background-color: rgba(255,0,0,.2);
+}
+
+#intLeague {
+  background-color: rgba(0,255,0,.2);
+}
+
+#srLeague {
+  background-color: rgba(0,0,255,.2);
+}

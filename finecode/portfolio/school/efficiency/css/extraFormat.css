@@ -1,0 +1,13 @@
+/*
+  Assignment: Attraction Efficiency Tracker
+  Author: Matthew Baugh
+  Date: 8/13/2020
+  Purpose: To add extra style to certain mobile application elements
+*/
+#tblData td, th {
+  padding: 0 5px;
+}
+
+#tblData tbody tr:nth-of-type(2n) {
+  background-color: #ddd;
+}

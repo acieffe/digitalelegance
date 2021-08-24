@@ -1,0 +1,44 @@
+<!--
+  Assignment: Sign In 3
+  Author: Matthew Baugh
+  Date: 8/23/2020
+  Purpose: This page will allow the user to enter in a username and password
+    to be stored and used later. Validation will be made on the user's password.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign In Page 2</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Sign In Page 2</h1>
+
+    <div id="inputField">
+      <label for="username">Username</label><br />
+      <input type="text" name="username" id="username"
+        placeholder="Username" value=""><br />
+
+      <label for="password">Password</label><br />
+      <input type="password" name="password" id="password"
+        placeholder="Password" value=""><br />
+
+      <button type="button" name="button" onclick="storeUserPass()">
+        Submit
+      </button>
+    </div>
+
+    <h3 id="head3"></h3>
+    <p id="showGrade"></p>
+
+  </body>
+</html>

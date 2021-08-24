@@ -1,0 +1,56 @@
+/*
+  Assignment: Dice Game
+  Author: Matthew Baugh
+  Date: 8/22/2020
+  Purpose: Style the page with Gold accents
+*/
+
+body {
+  background-color: black;
+  color: #d0b64f;
+  margin: 0;
+}
+
+#wrap {
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+}
+
+h1 {
+  text-align: center;
+  flex: 1;
+}
+
+.buttons {
+  background-image:
+    linear-gradient(to left bottom, #f0d547, #916f27, #f1d547);
+  border: #d0b64f 5px groove;
+  border-radius: 20px;
+  padding: 5px;
+  margin: 5px auto;
+  width: 100px;
+  color: black;
+}
+
+h2, h3, h4, p {
+  text-align: center;
+}
+
+#gameBoard {
+  background-image: linear-gradient(to left bottom, #222, #444, #222);
+  border: #d0b64f 5px groove;
+  border-radius: 20px;
+  display: flex;
+  margin: 0 auto;
+}
+
+#playerSide, #computerSide {
+  width: 195px
+}
+
+#playDice, #compDice {
+  width: 104px;
+  margin: 0 auto;
+}

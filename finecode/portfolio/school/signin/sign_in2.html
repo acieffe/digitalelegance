@@ -1,0 +1,64 @@
+<!--
+  Assignment: Sign In 2
+  Author: Matthew Baugh
+  Date: 8/23/2020
+  Purpose: This page will allow the user to enter in personal information to be
+    stored and used later. Validation will be made on the user's phone number.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Sign In Page 1</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Sign In Page 1</h1>
+
+    <div id="inputField">
+      <label for="fName">First Name</label><br />
+      <input type="text" name="fName" id="fName"
+        placeholder="First Name" value=""><br />
+
+      <label for="lName">Last Name</label><br />
+      <input type="text" name="lName" id="lName"
+        placeholder="Last Name" value=""><br />
+
+      <label for="address">Street Address</label><br />
+      <input type="text" name="address" id="address"
+        placeholder="Street Address" value=""><br />
+
+      <label for="city">City</label><br />
+      <input type="text" name="city" id="city"
+        placeholder="City" value=""><br />
+
+      <label for="state">State</label><br />
+      <input type="text" name="state" id="state"
+        placeholder="State" value=""><br />
+
+      <label for="email">Email Address</label><br />
+      <input type="email" name="email" id="email"
+        placeholder="tom@email.com" value=""><br />
+
+      <label for="phone">Phone Number</label><br />
+      <input type="tel" name="phone" id="phone"
+        placeholder="(555)555-5555" value=""><br />
+
+      <button type="button" name="button" onclick="storeInfo()">
+        Sumbit
+      </button>
+    </div>
+
+    <h3 id="head3"></h3>
+    <p id="showGrade"></p>
+
+  </body>
+</html>
