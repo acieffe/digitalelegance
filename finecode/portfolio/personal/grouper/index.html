@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grouper App</title>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+	<!-- Buttons that float above the Header Area -->
+	<img src="images/minScreen.png" id="fullScreen" width="20px" height="20px"/>
+	<div id="bestIf">Best if viewed<br />in fullscreen --></div>
+	<img src="images/help.png" onclick="showHelp()" id="help" width="20px" height="20px"/>
+
+	<div id="topHeader">
+		<div id="drawControls">
+			<div id="drawTop" class="controlRow">
+				<div class="controlBtnDown" id="drawing"><img src="images/drawingDown.png" id="drawImg" /></div>
+				<div class="controlBtnUp" id="erasing"><img src="images/eraserUp.png" id="eraseImg" /></div>
+				<div class="controlBtnUp" id="clearDraw"><img src="images/clearDraw.png" onclick="eraseCanvas()" /></div>
+				<div class="controlBtnUp" id="clearNotepad"><img src="images/clearPad.png" onclick="comingUpClear()" id="clearPad" /></div>
+			</div>
+			<div id="drawBottom" class="controlRow">
+				<div class="controlBtnUp" id="colorChoice"><img src="images/black.png" id="colorHolder" /></div>
+				<div class="controlBtnUp" id="lineSize"><img src="images/51.png" id="lineSizeHolder"/></div>
+				<div class="controlBtnUp" id="lineOpacity"><img src="images/key0.png" id="opacityHolder" style="opacity: 1;"/></div>
+				<div class="controlBtnUp" id="keypadView"><img src="images/keypad.png" /></div>
+			</div>
+
+			<!--  All Color Buttons -->
+			<div id="colorPickerShow" style="display: none;">
+				<div class="controlBtnUp" onclick="replaceColor('black')"><img src="images/black.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('white')"><img src="images/white.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('red')"><img src="images/red.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('orange')"><img src="images/orange.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('yellow')"><img src="images/yellow.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('lime')"><img src="images/lime.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('blue')"><img src="images/blue.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('purple')"><img src="images/purple.png" /></div>
+				<div class="controlBtnUp" onclick="replaceColor('rainbow')"><img src="images/rainbow.png" /></div>
+			</div>
+
+			<!--  All Line Size Buttons -->
+			<div id="lineSizeShow" style="display: none;">
+				<div class="controlBtnUp" onclick="lineSize(6)"><img src="images/6.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(11)"><img src="images/11.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(16)"><img src="images/16.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(21)"><img src="images/21.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(26)"><img src="images/26.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(31)"><img src="images/31.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(36)"><img src="images/36.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(41)"><img src="images/41.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(46)"><img src="images/46.png" /></div>
+				<div class="controlBtnUp" onclick="lineSize(51)"><img src="images/51.png" /></div>
+			</div>
+
+			<!--  All Opacity Buttons -->
+			<div id="opacityShow" style="display: none;">
+				<div class="controlBtnUp" onclick="opacity(0.3)"><img src="images/key0.png" style="opacity: 0.3;" /></div>
+				<div class="controlBtnUp" onclick="opacity(0.7)"><img src="images/key0.png" style="opacity: 0.7;" /></div>
+				<div class="controlBtnUp" onclick="opacity(1)"><img src="images/key0.png" style="opacity: 1;" /></div>
+			</div>
+		</div>
+		<div id="grouperPad">
+			<div id="notepad">
+				<p id="output">Group<br/>Numbers</p>
+			</div>
+		</div>
+		<div id="title">
+			<h1 id="titleText">Traveler Tracker</h1>
+			<div id="drawToggle">
+				<img src="images/lockOpen.png" onclick="toggleCanvas() "id="lock" />
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--******************************
+*
+* Help Information accessed by ? on page
+*
+*********************************-->
+
+<div id="helpFile" style="display: block;">
+	<h2 id="helpTitle">How To:</h2>
+	<div id="startUp">Rotate to landscape to get started</div>
+	<div id="closeHelp">Choose A Grouper then tap load to start!
+	</div>
+	<div id="theGrouper">
+		<select id="grouperName">
+			<option value="grouper1">Grouper 1</option>
+			<option value="grouper2">Grouper 2</option>
+			<option value="grouper3">Grouper 3</option>
+			<option value="grouper2l">Grouper 2 Left</option>
+			<option value="grouper3r">Grouper 3 Right</option>
+		</select>
+		<button id="grouperSubmit">Load</button>
+	</div>
+
+	<div id="helpList">
+		<div id="topLCol">
+			<ul class="listStyle">
+				<li><img src="images/drawingUp.png" class="keyBtn" />Draw on seats area</li>
+				<li><img src="images/eraserUp.png" class="keyBtn" />Erase drawings on seats area</li>
+				<li><img src="images/clearDraw.png" class="keyBtn" />Clear all drawings on seats area</li>
+				<li><img src="images/black.png" class="keyBtn" />Current Color: Tap for color options</li>
+				<li><img src="images/51.png" class="keyBtn" />Line Size: Tap for size options</li>
+				<li><img src="images/key0.png" class="keyBtn" />Drawing Opacity: Tap for opacity options</li>
+			</ul>
+		</div>
+		<div id="bottomRCol">
+			<ul class="listStyle">
+				<li><img src="images/keypad.png" class="keyBtn" />Show/Hide the Grouper Keypad</li>
+				<li><img src="images/clearPad.png" class="keyBtn" />Clear all groups from notepad</li>
+				<li><img src="images/keyF.png" class="keyBtn" />Tap this to separate group numbers</li>
+				<li><img src="images/keyB.png" class="keyBtn" />Deletes last number/group icon</li>
+				<li><img src="images/help.png" class="lilBtn" />Displays this help file when needed</li>
+				<li><img src="images/minScreen.png" class="lilBtn" />~<img src="images/maxScreen.png" class="lilBtn" />Tap to toggle fullscreen mode</li>
+			</ul>
+		</div>
+	</div>
+	<p id="howTo">To mark a seat or a ride room down, simply toggle the "DRAW/RIDE" switch and select the individual seat(s) or select the room(s). Toggle again to return to draw.</p>
+</div>
+
+<div id="control">
+	<!--******************************
+	*
+	* Ride Room Templates
+	*
+	*********************************-->
+
+	<div id="allRooms" style="display: none;">
+		<div id="room01" class="roomsGood">
+			<div id="roomName01" class="roomNameGood" onclick="whyGodNo('roomName01')">
+				<h2 id="header01">
+				</h2>
+			</div>
+			<div id="rr01" class="rideRoom">
+				<div id="rr1h1">
+				</div>
+				<div id="rr1Wedge" class="wedge">
+				</div>
+				<div id="rr1h2">
+				</div>
+			</div>
+		</div>
+
+		<div class="divide" id="divide1" style="display: none;">
+			<img src="images/divide.png" />
+		</div>
+
+		<div id="room02" class="roomsGood">
+			<div id="roomName02" class="roomNameGood" onclick="whyGodNo('roomName02')">
+				<h2 id="header02">
+				</h2>
+			</div>
+			<div id="rr02" class="rideRoom">
+				<div id="rr2h1">
+				</div>
+				<div id="rr2Wedge" class="wedge">
+				</div>
+				<div id="rr2h2">
+				</div>
+			</div>
+		</div>
+
+		<div class="divide" id="divide2" style="display: none;">
+			<img src="images/divide.png" />
+		</div>
+
+		<div id="room03" class="roomsGood">
+			<div id="roomName03" class="roomNameGood" onclick="whyGodNo('roomName03')">
+				<h2 id="header03">
+				</h2>
+			</div>
+			<div id="rr03" class="rideRoom">
+				<div id="rr3h1">
+				</div>
+				<div id="rr3Wedge" class="wedge">
+				</div>
+				<div id="rr3h2">
+				</div>
+			</div>
+		</div>
+
+		<div class="divide" id="divide3" style="display: none;">
+			<img src="images/divide.png" />
+		</div>
+
+		<div id="room04" class="roomsGood">
+			<div id="roomName04" class="roomNameGood" onclick="whyGodNo('roomName04')">
+				<h2 id="header04">
+				</h2>
+			</div>
+			<div id="rr04" class="rideRoom">
+				<div id="rr4h1">
+				</div>
+				<div id="rr4Wedge" class="wedge">
+				</div>
+				<div id="rr4h2">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="topLayer" style="display: none;">
+	<canvas id="canvas">It looks like you don't support canvas, Sorry!</canvas>
+</div>
+
+<section id="keypadHolderShow" style="display: none;">
+	<div id="keypad">
+		<div class="row">
+			<div class="controlBtnUp" onclick="comingUp('1')" id="keypad1"><img src="images/key1.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('2')" id="keypad2"><img src="images/key2.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('3')" id="keypad3"><img src="images/key3.png" class="keyButton" /></div>
+		</div>
+		<div class="row">
+			<div class="controlBtnUp" onclick="comingUp('4')" id="keypad4"><img src="images/key4.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('5')" id="keypad5"><img src="images/key5.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('6')" id="keypad6"><img src="images/key6.png" class="keyButton" /></div>
+		</div>
+		<div class="row">
+			<div class="controlBtnUp" onclick="comingUp('7')" id="keypad7"><img src="images/key7.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('8')" id="keypad8"><img src="images/key8.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('9')" id="keypad9"><img src="images/key9.png" class="keyButton" /></div>
+		</div>
+		<div class="row">
+			<div class="controlBtnUp" onclick="comingUp('F')" id="keypadF"><img src="images/keyF.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="comingUp('0')" id="keypad0"><img src="images/key0.png" class="keyButton" /></div>
+			<div class="controlBtnUp" onclick="backBtn()" id="keypadB"><img src="images/keyB.png" class="keyButton" /></div>
+		</div>
+	</div>
+</section>
+
+<!-- Preloading Images Before Needing Them -->
+<img src="images/drawingUp.png" style="display: none;" />
+<img src="images/eraserDown.png" style="display: none;" />
+<div id="easterEgg" style="display: none;" onclick="disappearEgg()"></div>
+<img src="images/s1Good.png" style="display: none;" />
+<img src="images/s2Good.png" style="display: none;" />
+<img src="images/s3Good.png" style="display: none;" />
+<img src="images/s4Good.png" style="display: none;" />
+<img src="images/s5Good.png" style="display: none;" />
+<img src="images/s6Good.png" style="display: none;" />
+<img src="images/s7Good.png" style="display: none;" />
+<img src="images/s8Good.png" style="display: none;" />
+<img src="images/s9Good.png" style="display: none;" />
+<img src="images/s10Good.png" style="display: none;" />
+<img src="images/s11Good.png" style="display: none;" />
+<img src="images/s12Good.png" style="display: none;" />
+<img src="images/s13Good.png" style="display: none;" />
+<img src="images/s14Good.png" style="display: none;" />
+<img src="images/s15Good.png" style="display: none;" />
+<img src="images/s16Good.png" style="display: none;" />
+<img src="images/s1Down.png" style="display: none;" />
+<img src="images/s2Down.png" style="display: none;" />
+<img src="images/s3Down.png" style="display: none;" />
+<img src="images/s4Down.png" style="display: none;" />
+<img src="images/s5Down.png" style="display: none;" />
+<img src="images/s6Down.png" style="display: none;" />
+<img src="images/s7Down.png" style="display: none;" />
+<img src="images/s8Down.png" style="display: none;" />
+<img src="images/s9Down.png" style="display: none;" />
+<img src="images/s10Down.png" style="display: none;" />
+<img src="images/s11Down.png" style="display: none;" />
+<img src="images/s12Down.png" style="display: none;" />
+<img src="images/s13Down.png" style="display: none;" />
+<img src="images/s14Down.png" style="display: none;" />
+<img src="images/s15Down.png" style="display: none;" />
+<img src="images/s16Down.png" style="display: none;" />
+<img src="images/WedgeGood.png" style="display: none;" />
+<img src="images/WedgeDown.png" style="display: none;" />
+
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>

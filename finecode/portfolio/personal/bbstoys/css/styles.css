@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+
+body {
+  background-image:
+    linear-gradient(to bottom, darkblue, skyblue);
+  color: rgb(218, 131, 0);
+  height: 100vh;
+  margin: 0px;
+}
+
+#navigation {
+  width: 320px;
+  margin: 0px auto;  
+}
+
+nav img {
+  margin: 0px;
+  padding: 0px;
+}
+
+#showNav {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: small;
+  background-color: yellow;
+  color: black;
+  padding: 20px;
+  border-radius: 0px 0px 0px 50px;
+
+}
+
+table {
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#inputField, #again {
+  width: 100px;
+  margin: 10px auto 0px;
+}
+
+h3 {
+  background-color: orange;
+  border-radius: 20px;
+  border: 4px outset rgb(218, 131, 0);
+  padding: 5px;
+  margin: 0px auto 20px;
+  color: darkblue;
+  text-align: center;
+}
+
+h2 {
+  margin-top: -10px;
+  font-family: 'Nerko One', cursive;
+  font-size: 35vmin;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.vehicle {
+  z-index: 100;
+  position: absolute;
+}
+
+#rocket {
+  bottom: 1px;
+  left: 100px;
+}
+
+#jet, #helicopter {
+  bottom: 1px;
+  right: 1px;
+}
+
+#carLeft {
+  bottom: 1px;
+  left: 1px;
+}
+
+#carRight {
+  bottom: 1px;
+  right: 1px;
+}
+
+#sub {
+  z-index: 100;
+  position: relative;
+  left: 100px;
+  top: 1px;
+}
+
+#water {
+  position: absolute;
+  top: 250px;
+  display: block;
+  width: 100%;
+  height: 100vh;
+  background-image:
+    linear-gradient(to bottom, mediumturquoise, darkblue);
+}
+
+#street {
+  background-color: grey;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  bottom: 0px;
+  z-index: 90;
+}
+
+#boat {
+  z-index: 100;
+  position: absolute;
+  top: -45px;
+  right: 1px;
+}
+
+#again {
+  display: none;
+}
