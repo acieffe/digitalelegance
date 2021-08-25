@@ -181,7 +181,7 @@
 					</div>
 
 					<!-- Screenshot of Project changed by hover and javascript -->
-					<div class="col d-code d-md-block fixed-top screenshot">
+					<div class="col d-none d-md-block fixed-top screenshot">
 						<h1 class="text-gold">Screenshot</h1>
 							<div class="p-4 text-center bg-gold border-gold bevelMe">
 								<img src="../img/code.png" class="img-fluid rounded"  id="screenshot" />
@@ -194,7 +194,7 @@
 			<footer class="full-width footer-radius bg-black border-gold text-gold pb-2">
 				<div class="container">
 					<div class="row pt-md-2 row-cols-1 row-cols-md-3">
-						<div class="col-md-3 d-code d-md-block">
+						<div class="col-md-3 d-none d-md-block">
 							<h5 class="thick">Site Links</h5>
 							<ul class="text-gold no-bullet footer-list">
 								<li><a class="text-gold" href="https://digitalelegance.com">Digital Elegance | Home</a></li>
@@ -211,16 +211,16 @@
 							</div>
 						</div>
 						<div class="col-12 col-md-3">
-							<h5 class="thick d-code d-md-block">Contact Me</h5>
+							<h5 class="thick d-none d-md-block">Contact Me</h5>
 							<ul class="nav flex-md-column text-gold mb-2 footer-list">
 								<li>Ace Baugh</li>
-								<li class="d-md-code px-1">|</li>
+								<li class="d-md-none px-1">|</li>
 								<li>Orlando, Florida</li>
-								<li class="d-md-code px-1">|</li>
+								<li class="d-md-none px-1">|</li>
 								<li>
 									<a class="text-gold" href="tel:208-557-9223">(208) 55-79-ACE (223)</a>
 								</li>
-								<li class="d-md-code px-1">|</li>
+								<li class="d-md-none px-1">|</li>
 								<li class="px-md-0 h-25 d-block-inline">
 									<a class="text-gold" href="mailto:ace@digitalelegance.com">ace@digitalelegance.com</a>
 								</li>
@@ -259,9 +259,7 @@
 
 		<script>
 			function screenshot(img) {
-
-				document.getElementById('screenshot').src = `../img/${img}.png`
-
+				document.getElementById('screenshot').src = `../img/${img}.png`;
 			}
 		</script>
 	</body>
