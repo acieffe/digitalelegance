@@ -9,6 +9,8 @@ function screenshot(img, technologies) {
 			tech.push('&#xe649');
 		} else if (element == 'bootstrap') {
 			tech.push('&#xe647');
+		} else if (element == 'w3c') {
+			tech.push('&#xe66c');
 		} else if (element == 'javascript') {
 			tech.push('&#xe681');
 		} else if (element == 'npm') {
