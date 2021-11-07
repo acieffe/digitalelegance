@@ -301,3 +301,9 @@ footer i:hover {
 	top: 100px;
 	left: 50%;
 }
+
+#selfPortrait {
+	border: 0;
+	border-radius: 50%;
+	height: 16rem;
+}
