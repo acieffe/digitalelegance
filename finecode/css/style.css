@@ -145,6 +145,16 @@ a {
 	font-weight: 200;
 }
 
+
+#technologies {
+	width: 100%;
+}
+
+.tech-icons{
+	font-size: 2.5rem;
+	font-family: "devicons";
+}
+
 .height550 {
 	height: 450px;
 }
