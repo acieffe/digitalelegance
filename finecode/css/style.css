@@ -299,7 +299,7 @@ footer i:hover {
 }
 
 .lists a:hover {
-	color: var(--white)
+	color: var(--white);
 }
 
 .screenshot {
