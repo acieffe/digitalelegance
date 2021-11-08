@@ -237,10 +237,6 @@ footer i:hover {
 	box-shadow: 0px 10px 10px var(--gold);
 }
 
-.border-radius {
-	border-radius: 20px;
-}
-
 .text-gold {
 	color: var(--gold);
 }
