@@ -162,3 +162,27 @@ body {
 .pie__segment:nth-of-type(8) {
 	background-color: #f44336;
 }
+
+.switches {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.switches img {
+   cursor: pointer;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+#hidden {
+   cursor: pointer;
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   z-index: 100;
+}
+
+.switches p {
+   margin: 0;
+}
