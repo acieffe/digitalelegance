@@ -1,3 +1,4 @@
+let container = document.querySelector('.container');
 let spinner = document.querySelector('.spinner');
 let spin = document.getElementById('spin');
 let btnOne = document.getElementById('setOne');
@@ -7,6 +8,8 @@ let btnHidden = document.getElementById('hidden');
 let rotations = 0;
 let degrees = 0;
 var currentSet = ['turkey', 'horse', 'sheep', 'cat', 'duck', 'dog', 'rooster', 'cow'];
+let infoIcon = document.querySelector('.infoIcon');
+let popupInfo = document.querySelector('.popupInfo');
 
 btnOne.onclick = function () {
 	currentSet = ['turkey', 'horse', 'sheep', 'cat', 'duck', 'dog', 'rooster', 'cow'];
@@ -24,7 +27,7 @@ btnThree.onclick = function () {
 };
 
 btnHidden.onclick = function () {
-	currentSet = ['penguin', 'penguin', 'penguin', 'penguin', 'penguin', 'penguin', 'penguin', 'penguin'];
+	currentSet = ['penguin', 'wave', 'penguin', 'penguin', 'penguin', 'wave', 'penguin', 'penguin'];
 	changeImages(currentSet);
 };
 
@@ -75,3 +78,16 @@ function changeImages(currentSet) {
 	document.getElementById('seven').src = 'img/' + currentSet[6] + '.png';
 	document.getElementById('eight').src = 'img/' + currentSet[7] + '.png';
 }
+
+infoIcon.onclick = function () {
+	if (infoIcon.innerHTML == 'X') {
+		infoIcon.innerHTML = '&#9432;';
+		popupInfo.style = 'display: none;';
+		spinner.style = 'display: block;';
+		spin.style = 'display: block;';
+	} else {
+		infoIcon.innerHTML = 'X';
+		popupInfo.style = 'display: block;';
+		spinner.style = 'display: none;';
+		spin.style = 'display: none;';	}
+};

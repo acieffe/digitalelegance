@@ -47,7 +47,7 @@ body {
 
 .images {
    position: absolute;
-   z-index: 10;
+   z-index: 2;
    top: 5%;
    left: 43%;
 }
@@ -87,7 +87,7 @@ body {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	z-index: 100;
+	z-index: 50;
 	background-color: #e2e2e2;
 	text-transform: uppercase;
 	border: 8px solid #fff;
@@ -115,8 +115,6 @@ body {
    color: red;
    text-shadow: 1px 2px 3px #333;
 }
-
-/* ********* PIE Version ********* */
 
 .pie {
 	height: 40em;
@@ -186,3 +184,40 @@ body {
 .switches p {
    margin: 0;
 }
+
+.info {
+	position: absolute;
+	top: 0;
+	right: 0;	
+}
+
+.infoIcon {
+	padding: 5px;
+	color: #f44336;
+	font-weight: bolder;
+	font-size: 2em;
+	text-align: right;
+	font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+}
+
+.popupInfo {
+	background-color: #4caf50;
+	padding: 1em;
+	width: 40em;
+	border: 5px solid#009688;
+	border-radius: 2em;
+  	box-shadow: 2px 10px 10px 5px #333;
+	margin-right: 1em;
+	z-index: 90;
+	overflow: hidden;
+}
+
+.popupInfo h1 {
+	margin-top: 0;
+}
+
+.popupInfo ul {
+	text-align: left;
+}
+
