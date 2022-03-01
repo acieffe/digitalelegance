@@ -10,20 +10,38 @@
 	</head>
 
 	<body>
-      <h1 class="title">Sound Spinner</h1>
-      <div class="spinner">
-		<button id="spin">Spin</button>
-		<span class="arrow"></span>
+      <div class="header">
+         <h1 class="title">Sound Spinner</h1>
+      </div>
+      <div class="container">
+  		   <button id="spin">
+            <span class="text">
+               <span class="arrow">&#9650;</span>&#13;Spin
+            </span>
+         </button>
 
-         <div class="container">
-            <div class="one"><img src="img/turkey.png" alt=""></div>
-            <div class="two"><img src="img/horse.png" alt=""></div>
-            <div class="three"><img src="img/sheep.png" alt=""></div>
-            <div class="four"><img src="img/dog.png" alt=""></div>
-            <div class="five"><img src="img/duck.png" alt=""></div>
-            <div class="six"><img src="img/rooster.png" alt=""></div>
-            <div class="seven"><img src="img/cow.png" alt=""></div>
-            <div class="eight"><img src="img/cat.png" alt=""></div>
+         <div class="shadow">
+            <div class="spinner">
+               <div class="pie">
+                  <div class="pie__segment" data-value='45', style='--start: 0'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 45'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 90'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 135'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 180'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 225'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 270'></div>
+                  <div class="pie__segment" data-value='45', style='--start: 315'></div>
+               </div>
+               <div class="images" id="one"><img src="img/turkey.png" alt=""></div>
+               <div class="images" id="two"><img src="img/horse.png" alt=""></div>
+               <div class="images" id="three"><img src="img/sheep.png" alt=""></div>
+               <div class="images" id="four"><img src="img/cat.png" alt=""></div>
+               <div class="images" id="five"><img src="img/duck.png" alt=""></div>
+               <div class="images" id="six"><img src="img/dog.png" alt=""></div>
+               <div class="images" id="seven"><img src="img/rooster.png" alt=""></div>
+               <div class="images" id="eight"><img src="img/cow.png" alt=""></div>
+
+            </div>
          </div>
       </div>
 

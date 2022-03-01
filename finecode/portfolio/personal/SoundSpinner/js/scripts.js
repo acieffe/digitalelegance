@@ -1,4 +1,4 @@
-let container = document.querySelector('.container');
+let spinner = document.querySelector('.spinner');
 let btn = document.getElementById('spin');
 let rotations = 0;
 let degrees = 0;
@@ -6,7 +6,7 @@ let output = document.querySelector('.output');
 
 btn.onclick = function () {
 	rotations += Math.ceil(Math.random() * 720) + 720;
-	container.style.transform = 'rotate(' + rotations + 'deg)';
+	spinner.style.transform = 'rotate(' + rotations + 'deg)';
    degrees = rotations % 360;
    makeSound(degrees);
 };
@@ -16,17 +16,17 @@ function makeSound(degrees) {
 	setTimeout(function () {
 		if (degrees <= 45) {
 			tile = 8;
-			var audio = new Audio('sounds/cat.mp3');
+			var audio = new Audio('sounds/cow.mp3');
 			audio.play();
 		}
       else if (degrees <= 90) {
 			tile = 7;
-			var audio = new Audio('sounds/cow.mp3');
+			var audio = new Audio('sounds/rooster.mp3');
 			audio.play();
 		}
       else if (degrees <= 135) {
 			tile = 6;
-			var audio = new Audio('sounds/rooster.mp3');
+			var audio = new Audio('sounds/dog.mp3');
 			audio.play();
 		}
       else if (degrees <= 180) {
@@ -36,7 +36,7 @@ function makeSound(degrees) {
 		}
       else if (degrees <= 225) {
 			tile = 4;
-			var audio = new Audio('sounds/dog.mp3');
+			var audio = new Audio('sounds/cat.mp3');
 			audio.play();
 		}
       else if (degrees <= 270) {
