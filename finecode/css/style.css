@@ -2,16 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 :root {
-   --gold: #d0b64f;
-   --ltGold: #f0d547;
-   --dkGold: #916f27;
+   --gold: #ffd11d;
+   --ltGold: #ddd15d;
+   --dkGold: #906d25;
    --dkSteel: #222;
    --ltSteel: #444;
    --white: #f8f9fa;
 }
 
 body {
-	background: url(../img/kitsugi.gif);
+	background: url(../img/kitsugi.png);
 	background-size: cover;
 	background-attachment: fixed;
 }
