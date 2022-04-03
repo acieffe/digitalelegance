@@ -148,6 +148,6 @@ a:hover {
 
 @media only screen and (max-height: 800px) and (orientation: landscape) {
 	.cornerHolder img {
-		width: 20%;
+		height: 30%;
 	}
 }
