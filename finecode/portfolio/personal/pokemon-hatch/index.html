@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Pokemon Hatching Game</title>
+
+		<link rel="stylesheet" href="game.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="game-title">
+				<img src="Pokémon-Logo-300x110.png" alt="" />
+				<h1>Hatching Game</h1>
+			</div>
+			<div class="egg-container">
+				<div class="pokemon-image" id="pokemon-image"></div>
+				<div class="egg-pieces" id="egg-pieces">
+					<div class="egg-piece egg-top" id="egg-top">
+						<svg
+							width="100%"
+							height="100%"
+							viewBox="0 0 180 240"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xml:space="preserve"
+							xmlns:serif="http://www.serif.com/"
+							style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+						>
+							<path
+								id="egg-top"
+								d="M90,-0C49.85,0.054 19.963,68.965 19.963,68.965L18.421,72.767L33.057,66.994L43.567,80.381L49.979,72.428L52.801,76.02L58.721,83.332L74.448,65.347L86.404,82.702L98.037,68.965L107.29,82.633L117.707,77.816L131.176,72.172L135.018,65.696L142.188,79.278L156.173,67.297L160.038,68.965C160.038,68.965 129.893,-0.054 90,-0Z"
+							/>
+						</svg>
+					</div>
+					<div class="egg-piece egg-left" id="egg-left">
+						<svg
+							width="100%"
+							height="100%"
+							viewBox="0 0 180 240"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xml:space="preserve"
+							xmlns:serif="http://www.serif.com/"
+							style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+						>
+							<path
+								id="egg-left"
+								d="M89.936,179.968L92.993,177.747L89.229,161.936L93.869,140.688L90.033,138.746L81.372,151.485L65.264,137.059L57.281,143.139L62.057,135.648L54.288,122.181L69.18,118.946L46.787,99.6L55.203,92.923L53.955,73.839L49.979,68.965L43.837,76.02L35.153,63.132L19.963,68.965C8.156,95.299 -0.188,122.662 0,150.034C0.031,162.141 1.203,171.966 3.287,179.968L4.44,184.714L14.313,187.793L27.531,178.813L38.075,186.638L48.934,179.968L54.613,190.358L69.592,179.968L81.792,188.562L89.936,179.968Z"
+							/>
+						</svg>
+					</div>
+					<div class="egg-piece egg-middle" id="egg-middle">
+						<svg
+							width="100%"
+							height="100%"
+							viewBox="0 0 180 240"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xml:space="preserve"
+							xmlns:serif="http://www.serif.com/"
+							style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+						>
+							<path
+								id="egg-middle"
+								d="M49.979,68.965L58.425,78.97L74.859,60.773L86.793,77.816L98.074,64.347L108.099,78.766L129.893,68.965L119.118,80.532L134.97,82.455L119.513,98.314L129.893,120L115.013,122.208L137.767,137.401L116.681,139.387L114.88,156.832L91.155,142.081L80.998,156.331L65.37,140.81L49.979,150.034L58.701,136.798L49.979,120L63.832,117.951L42.298,99.125L52.424,91.741L49.979,68.965Z"
+							/>
+						</svg>
+					</div>
+					<div class="egg-piece egg-right" id="egg-right">
+						<svg
+							width="100%"
+							height="100%"
+							viewBox="0 0 180 240"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xml:space="preserve"
+							xmlns:serif="http://www.serif.com/"
+							style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+						>
+							<path
+								id="egg-right"
+								d="M176.591,179.968L175.276,184.971L165.138,178.226L150.316,186.788L137.767,178.315L124.771,195.342L116.404,176.004L103.954,186.155L94.124,177.282L90.033,179.968L85.286,161.953L90.033,138.618L112.306,151.63L113.593,135.795L131.561,135.924L108.767,121.173L125.273,117.654L116.711,98.198L129.893,84.956L112.833,81.808L120.406,75.424L129.893,68.965L134.533,60.773L143.775,74.342L156.758,63.132L160.038,68.965C171.819,95.988 180.202,123.011 180,150.034C179.945,159.599 179.041,169.72 176.591,179.968Z"
+							/>
+						</svg>
+					</div>
+					<div class="egg-piece egg-bottom" id="egg-bottom">
+						<svg
+							width="100%"
+							height="100%"
+							viewBox="0 0 180 240"
+							version="1.1"
+							xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink"
+							xml:space="preserve"
+							xmlns:serif="http://www.serif.com/"
+							style="fill-rule: evenodd; clip-rule: evenodd; stroke-linejoin: round; stroke-miterlimit: 2"
+						>
+							<path
+								id="egg-bottom"
+								d="M3.287,179.968L14.202,185.099L27.643,174.754L38.322,182.448L49.979,175.807L55.105,186.013L69.101,174.15L81.435,183.758L94.115,173.545L104.141,182.802L118.07,168.793L124.762,190.549L136.356,173.271L150.184,183.867L163.897,174.859L176.591,179.968C176.591,179.968 169.681,239.784 90,240C10.32,240.216 3.287,179.968 3.287,179.968Z"
+							/>
+						</svg>
+					</div>
+				</div>
+			</div>
+			<div class="pokemon-name">
+				<h2 id="pokemon-name"></h2>
+			</div>
+			<div class="egg-timer">
+				<div class="count-down" id="count-down">
+					<h2 id="seconds">10</h2>
+				</div>
+				<div class="info-button">
+					<button class="btn" id="info-button" onclick="toggleInfo()" style="display: none">Pokemon Stats</button>
+				</div>
+			</div>
+			<div class="egg-button">
+				<button class="btn" id="egg-button" onclick="run()">Hatch</button>
+			</div>
+			<div class="pokemon-stats-container" id="pokemon-info" style="display: none" onclick="toggleInfo()">
+				<div class="close-btn" onclick="toggleInfo()">X</div>
+				<div class="pokemon-stats" id="pokemon-stats"></div>
+			</div>
+		</div>
+
+		<script src="game.js"></script>
+	</body>
+</html>
